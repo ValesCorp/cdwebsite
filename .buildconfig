@@ -1,0 +1,15 @@
+[default]
+name=Default
+runtime=host
+toolchain=default
+config-opts=
+run-opts=
+prefix=/home/davidvales/Proyectos/.gnome-builder/projects/cdwebsite/install/host
+app-id=
+postbuild=
+prebuild=
+run-command=
+default=true
+
+[default.environment]
+PATH="~/.local/share/swiftly/bin/swift"

@@ -1,0 +1,54 @@
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+        <meta name="theme-color" content="#6600ff"/>
+        <meta name="color-scheme" content="dark light"/>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+        <meta name="application-name" content="Christian Death – Official Website"/>
+        <meta name="yandex-verification" content="c68591104eff7335"/>
+        <link rel="icon" href="./ui/favicon.ico"/>
+        <link rel="manifest" href="./manifest.json"/>
+        <meta name="description" content="Darkness does not always mean evil. Sometimes it is the refuge of the soul."/>
+        <meta name="keywords" content="music, christian death, valor kand, gothic, gothic rock, deathrock, maitri nicolai, dark, black, art, underground"/>
+        <meta name="author" content="Vales Corp"/>
+        <title>Christian Death – Official Website</title>
+        <link type="text/css" rel="stylesheet" href="./src/semantic/semantic.css"></link>
+        <link type="text/css" rel="stylesheet" href="./src/css/cuerpo.css"></link>
+        <link type="text/css" rel="stylesheet" href="./src/css/componentes.css"></link>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
+    </head>
+    <body id="root">
+        <div class="ui grid">
+            <div class="ui grid">
+                <!-- Menú principal -->
+                <div id="menu" class="ui top fixed borderless big inverted menu">
+                    <div class="centrado">
+                        <div class="item">
+                        <img class="ui micro image" src="./ui/cdlogo.svg"/>
+                    </div>
+                    <a href="root" class="item"><span class="material-symbols-outlined">home</span></a>
+                    <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">music_cast</span><p>Listen</p></a>
+                    <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">contacts</span>Contacts</a>
+                    <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">history</span>Past Tour Dates</a>
+                    <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">calendar_add_on</span>Upcoming Tour Dates</a>
+                    </div>
+
+                </div>
+                <!-- Termina menú principal -->
+                <div id="logo_principal">
+                    <img class="ui massive image" src="./ui/cdlogoprincipal.svg"></img>
+                </div>
+                <div id="carrusel-principal">
+                    <div id="contenedor-carrusel">
+                        <img class="ui massive image" src="https://raw.githubusercontent.com/YamiVales/servidor-de-imagenes/531815fedd85daa121db38ad4384c7469aed4ba4/sources/christiandeath/baner0.webp"></img>
+                    </div>
+                    <img class="ui massive image" src="https://raw.githubusercontent.com/YamiVales/servidor-de-imagenes/531815fedd85daa121db38ad4384c7469aed4ba4/sources/christiandeath/baner0.webp"></img>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
+    </body>
+</html>

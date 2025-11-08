@@ -1,0 +1,45 @@
+body {
+    background-color: #000000;
+}
+
+/*menú opaco y estilo vidrio*/
+.ui.menu {
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    background-color: #000000bf !important;
+    backdrop-filter: blur(10px);
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#logo_principal {
+    position: absolute;
+    top: 20%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* para que quede encima del carrusel */
+}
+
+#logo_principal img {
+    width: 70%;  /* ajusta según lo que necesites */
+    height: auto;
+}
+
+#carrusel-principal {
+    position: relative;
+    top: 20%;
+    left: 55%;
+}
+
+#carrusel-principal img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px; /* opcional, para esquinas suaves */
+    mask-image:
+        linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%),
+        linear-gradient(to left, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-composite: intersect;
+        -webkit-mask-image:
+            linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%),
+            linear-gradient(to left, transparent 0%, black 10%, black 90%, transparent 100%);
+        -webkit-mask-composite: intersect;
+}

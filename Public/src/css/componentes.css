@@ -1,0 +1,7 @@
+.centrado {
+    display: flex;
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    text-align: center !important;
+}
