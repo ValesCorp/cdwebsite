@@ -7,39 +7,80 @@ body {
     border: 1px solid rgba(34, 36, 38, 0.15);
     background-color: #000000bf !important;
     backdrop-filter: blur(10px);
-    margin-bottom: 0;
-    padding-bottom: 0;
+    margin-bottom: 2px;
+    padding-bottom: 0.5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;/* 🔧 altura real del menú */
+    background: #111;
+    z-index: 1000;
 }
 
+/* Contenedor exterior: centra todo y permite escalar */
+.contenedor-externo {
+    position: fixed; /* hace que se mantenga centrado en toda la ventana */
+    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: black; /* fondo opcional */
+    overflow: hidden;
+    overflow-x: hidden; /* evita desplazamiento lateral */
+    overflow-y: auto;   /* permite scroll vertical si no cabe */
+    padding: 4vh 0;
+}
+
+/* Contenedor interno con tamaño base */
+.contenedor {
+    position: relative;
+    width: 1000px;   /* tamaño base */
+    height: 600px;   /* tamaño base */
+    transform-origin: center;
+    top: -13s%;
+}
+
+/* Logo centrado arriba */
 #logo_principal {
     position: absolute;
     top: 20%;
-    left: 58%;
-    transform: translate(-50%, -50%);
-    z-index: 10; /* para que quede encima del carrusel */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
 }
 
 #logo_principal img {
-    width: 70%;  /* ajusta según lo que necesites */
+    width: 500px;
     height: auto;
 }
 
-#carrusel-principal {
-    position: relative;
-    top: 20%;
-    left: 55%;
+/* Carrusel debajo del logo */
+#carrusel_principal {
+    position: absolute;
+    top: 30%; /* 🔧 justo debajo del logo */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-#carrusel-principal img {
-    width: 100%;
+#carrusel_principal img {
+    width: 800px;
     height: auto;
-    border-radius: 20px; /* opcional, para esquinas suaves */
+    border-radius: 20px;
+    display: block;
     mask-image:
         linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%),
         linear-gradient(to left, transparent 0%, black 10%, black 90%, transparent 100%);
     mask-composite: intersect;
         -webkit-mask-image:
-            linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%),
-            linear-gradient(to left, transparent 0%, black 10%, black 90%, transparent 100%);
+        linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%),
+        linear-gradient(to left, transparent 0%, black 10%, black 90%, transparent 100%);
         -webkit-mask-composite: intersect;
 }
+
+/* Escalado proporcional con la pantalla */
+@media (max-width: 1200px) {
+    .contenedor {
+        transform: scale(calc(100vw / 1200));
+    }
+}
+
