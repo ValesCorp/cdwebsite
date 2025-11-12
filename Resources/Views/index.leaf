@@ -21,33 +21,33 @@
     </head>
     <body id="root">
         <div class="ui grid">
-            <div class="ui grid">
-                <!-- Menú principal -->
-                <div id="menu" class="ui top fixed borderless big inverted menu">
+            <!-- Menú principal para pc y pantallas grandes -->
+            <div class="computer only ui grid">
+                <div id="menu_computadora" class="ui top fixed borderless big inverted menu">
                     <div class="centrado">
                         <div class="item">
+                            <img class="ui micro image" src="./ui/cdlogo.svg"/>
+                        </div>
+                        <a href="#root" class="item"><span class="material-symbols-outlined">home</span></a>
+                        <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">music_cast</span><p>Listen</p></a>
+                        <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">contacts</span>Contacts</a>
+                        <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">history</span>Past Tour Dates</a>
+                        <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">calendar_add_on</span>Upcoming Tour Dates</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile only ui grid">
+                <div class="menu_movil" class="ui top borderless menu">
+                    <div class="left item">
                         <img class="ui micro image" src="./ui/cdlogo.svg"/>
                     </div>
-                    <a href="root" class="item"><span class="material-symbols-outlined">home</span></a>
-                    <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">music_cast</span><p>Listen</p></a>
-                    <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">contacts</span>Contacts</a>
-                    <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">history</span>Past Tour Dates</a>
-                    <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">calendar_add_on</span>Upcoming Tour Dates</a>
+                    <div class="right item">
+                        <a href="#" id="boton_menu"><span class="material-symbols-outlined">menu</span></a>
                     </div>
-
                 </div>
-                <!-- Termina menú principal -->
-                <!-- <div class="contenedor"> -->
-                <!--     <div id="logo_principal"> -->
-                <!--         <img class="ui massive image" src="./ui/cdlogoprincipal.svg"></img> -->
-                <!--     </div> -->
-                <!--     <div id="carrusel_principal"> -->
-                <!--         <div id="contenedor-carrusel"> -->
-                <!--             <img class="ui massive image" src="https://raw.githubusercontent.com/YamiVales/servidor-de-imagenes/531815fedd85daa121db38ad4384c7469aed4ba4/sources/christiandeath/baner0.webp"></img> -->
-                <!--         </div> -->
-                <!--         <img class="ui massive image" src="https://raw.githubusercontent.com/YamiVales/servidor-de-imagenes/531815fedd85daa121db38ad4384c7469aed4ba4/sources/christiandeath/baner0.webp"></img> -->
-                <!--     </div> -->
-                <!-- </div> -->
+            </div>
+            <!-- Aqui empieza el contenido de la página -->
+            <div class="ui doubling container">
                 <div class="contenedor-externo">
                     <div class="contenedor">
                         <div id="logo_principal">

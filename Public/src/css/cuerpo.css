@@ -9,6 +9,7 @@ body {
     backdrop-filter: blur(10px);
     margin-bottom: 2px;
     padding-bottom: 0.5%;
+    height: 40px;
     position: fixed;
     top: 0;
     left: 0;
@@ -28,16 +29,17 @@ body {
     overflow: hidden;
     overflow-x: hidden; /* evita desplazamiento lateral */
     overflow-y: auto;   /* permite scroll vertical si no cabe */
+    margin-top: 0px;
     padding: 4vh 0;
 }
 
 /* Contenedor interno con tamaño base */
 .contenedor {
     position: relative;
-    width: 1000px;   /* tamaño base */
-    height: 600px;   /* tamaño base */
+    width: 1000px;   /* tamaño base ancho */
+    height: 600px;   /* tamaño base alto */
     transform-origin: center;
-    top: -13s%;
+    top: -14%;
 }
 
 /* Logo centrado arriba */
@@ -63,7 +65,7 @@ body {
 }
 
 #carrusel_principal img {
-    width: 800px;
+    width: 600px;
     height: auto;
     border-radius: 20px;
     display: block;

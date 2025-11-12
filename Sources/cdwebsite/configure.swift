@@ -6,6 +6,10 @@ import Vapor
 
 // configures your application
 public func configure(_ app: Application) async throws {
+    // para aceptar todas las conexiones
+    //app.http.server.configuration.hostname = "::"
+    //app.http.server.configuration.port = 8080
+    
     // uncomment to serve files from /Public folder
     app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
 
