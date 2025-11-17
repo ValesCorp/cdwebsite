@@ -1,5 +1,15 @@
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Esto mata cualquier desbordamiento lateral */
+}
+
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
 body {
-    background-color: #000000;
+    background-color: #2f2f2f;
 }
 
 /*menú opaco y estilo vidrio*/
@@ -11,8 +21,7 @@ body {
     padding-bottom: 0.5%;
     height: 40px;
     position: fixed;
-    top: 0;
-    left: 0;
+    /* top: 0; */
     width: 100%;/* 🔧 altura real del menú */
     background: #111;
     z-index: 1000;
@@ -20,26 +29,23 @@ body {
 
 /* Contenedor exterior: centra todo y permite escalar */
 .contenedor-externo {
-    position: fixed; /* hace que se mantenga centrado en toda la ventana */
-    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background: black; /* fondo opcional */
-    overflow: hidden;
-    overflow-x: hidden; /* evita desplazamiento lateral */
-    overflow-y: auto;   /* permite scroll vertical si no cabe */
-    margin-top: 0px;
-    padding: 4vh 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* padding-top: 0px; */
 }
 
 /* Contenedor interno con tamaño base */
 .contenedor {
     position: relative;
-    width: 1000px;   /* tamaño base ancho */
-    height: 600px;   /* tamaño base alto */
-    transform-origin: center;
-    top: -14%;
+    width: 1000px;
+    height: 500px;
+    transform-origin: top center;
 }
 
 /* Logo centrado arriba */
@@ -52,7 +58,7 @@ body {
 }
 
 #logo_principal img {
-    width: 500px;
+    width: 100%;
     height: auto;
 }
 
@@ -60,12 +66,12 @@ body {
 #carrusel_principal {
     position: absolute;
     top: 30%; /* 🔧 justo debajo del logo */
-    left: 50%;
+    left: 45%;
     transform: translateX(-50%);
 }
 
 #carrusel_principal img {
-    width: 600px;
+    width: 120%;
     height: auto;
     border-radius: 20px;
     display: block;
@@ -79,10 +85,35 @@ body {
         -webkit-mask-composite: intersect;
 }
 
+#menu_movil .right.menu {
+    padding-right: 3%;
+    padding-top: 1%;
+}
+
+.mobile.only.contenedor-externo{
+
+}
+
 /* Escalado proporcional con la pantalla */
-@media (max-width: 1200px) {
+@media (max-width: 767px) {
+    .contenedor-externo {
+        position: relative;
+        padding-top: -10px; /* 🔥 mantiene el contenedor justo debajo del menú */
+    }
+
     .contenedor {
-        transform: scale(calc(100vw / 1200));
+        position: relative;
+        height: 200px;
+    }
+
+    #logo_principal img {
+        width: 100%;
+        height: auto;
+    }
+
+    #carrusel-principal {
+        width: 260%;
+        height: auto;
     }
 }
 
