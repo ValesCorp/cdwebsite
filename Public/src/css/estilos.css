@@ -1,0 +1,17 @@
+/* @import url("https://cdn.jsdelivr.net/gh/YamiVales/Matrix-Book@main/font/Matrix-Book.otf"); */
+
+@font-face {
+    font-family: 'MatrixBook';
+    src: url('https://cdn.jsdelivr.net/gh/YamiVales/Matrix-Book@main/font/Matrix-Book.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/YamiVales/Matrix-Book@main/font/Matrix-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#galeria h1 {
+    font-family: Matrix-Book;
+}
+
+#boton_principal {
+    font-family: Matrix-Book;
+}

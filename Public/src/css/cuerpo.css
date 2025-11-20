@@ -9,7 +9,9 @@ html, body {
 }
 
 body {
-    background-color: #2f2f2f;
+    /* background-color: #000000; */
+    background-image: url("../.././ui/fondo.webp");
+    background-size: cover;
 }
 
 /*menú opaco y estilo vidrio*/
@@ -25,53 +27,103 @@ body {
     width: 100%;/* 🔧 altura real del menú */
     background: #111;
     z-index: 1000;
+
 }
 
-/* Contenedor exterior: centra todo y permite escalar */
-.contenedor-externo {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
+#menu {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    overflow-x: hidden;
-    overflow-y: auto;
-    /* padding-top: 0px; */
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    text-align: center !important;
 }
+/* Contenedor exterior: centra todo y permite escalar */
+/* Esto parece funcinar pero la responsibidad es un asco */
+/* .contenedor-externo { */
+/*     position: relative; */
+/*     width: 100%; */
+    /* min-height: 100vh; */
+/*     display: flex; */
+/*     justify-content: center; */
+/*     align-items: flex-start; */
+/*     overflow-x: hidden; */
+/*     overflow-y: auto; */
+/*     margin-bottom: -10%; */
+    /* padding-top: 0px; */
+/* } */
 
 /* Contenedor interno con tamaño base */
-.contenedor {
-    position: relative;
-    width: 1000px;
-    height: 500px;
-    transform-origin: top center;
-}
+/* .contenedor { */
+/*     position: relative; */
+/*     width: 1000px; */
+/*     height: 500px; */
+/*     transform-origin: top center; */
+/* } */
 
 /* Logo centrado arriba */
+/* #logo_principal { */
+/*     position: absolute; */
+/*     top: 20%; */
+/*     left: 50%; */
+/*     transform: translateX(-50%); */
+/*     z-index: 10; */
+/* } */
+
+/* #logo_principal img { */
+/*     width: 100%; */
+/*     height: auto; */
+/* } */
+
+/* Carrusel debajo del logo */
+/* #carrusel_principal { */
+/*     position: absolute; */
+/*     top: 30%;  */ /* 🔧 justo debajo del logo */
+/*     left: 45%; */
+/*     transform: translateX(-50%); */
+/* } */
+
+/* #carrusel_principal img { */
+/*     width: 120%; */
+/*     height: auto; */
+/*     border-radius: 20px; */
+/*     display: block; */
+/*     mask-image: */
+/*         linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%), */
+/*         linear-gradient(to left, transparent 0%, black 10%, black 90%, transparent 100%); */
+/*     mask-composite: intersect; */
+/*         -webkit-mask-image: */
+/*         linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%), */
+/*         linear-gradient(to left, transparent 0%, black 10%, black 90%, transparent 100%); */
+/*         -webkit-mask-composite: intersect; */
+/* } */
+
+.contenedor.ui.inverted.segment {
+    background-color: #000000;
+}
+
 #logo_principal {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    padding-top: 12vh;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
     z-index: 10;
 }
 
 #logo_principal img {
-    width: 100%;
+    width: 40vw;
     height: auto;
 }
 
 /* Carrusel debajo del logo */
 #carrusel_principal {
-    position: absolute;
-    top: 30%; /* 🔧 justo debajo del logo */
-    left: 45%;
-    transform: translateX(-50%);
+    position: relative;
+    margin-top: -15%;  /* justo debajo del logo */
+    /* left: 45%; */
+    /* transform: translateX(-50%); */
 }
 
 #carrusel_principal img {
-    width: 120%;
+    width: 40vw;
     height: auto;
     border-radius: 20px;
     display: block;
@@ -90,15 +142,22 @@ body {
     padding-top: 1%;
 }
 
-.mobile.only.contenedor-externo{
+.ui.button {
+    display: inline-flex;               /* pone el texto e icono alineados */
+    align-items: center;                /* centra verticalmente */
+    gap: 8px;                           /* espacio entre texto e icono */
+}
 
+.ui.button .material-symbols-outlined {
+    /* font-size: 24px;                     */ /* opcional: tamaño del icono */
+    line-height: 1;                     /* evita que empuje el texto */
 }
 
 /* Escalado proporcional con la pantalla */
 @media (max-width: 767px) {
     .contenedor-externo {
         position: relative;
-        padding-top: -10px; /* 🔥 mantiene el contenedor justo debajo del menú */
+        padding-top: -10px; /* mantiene el contenedor justo debajo del menú */
     }
 
     .contenedor {
@@ -117,3 +176,13 @@ body {
     }
 }
 
+
+/* Solo para el index de construcción, luego borrar */
+
+#bocadito {
+    display: flex;
+}
+
+#bocadito .item {
+    padding-left: 30px;
+}
