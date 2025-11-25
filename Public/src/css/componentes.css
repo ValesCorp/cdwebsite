@@ -29,17 +29,19 @@
 }
 
 .dorado {
+    display: block;
     color: transparent;
     background: linear-gradient(
         270deg,
+        #dfbd69,
         #f7ef8a,
+        #ccaf20,
         #d2ac47,
         #edc967,
         #dfbd69,
-        #ccaf20,
-        #b7b26c
+        #ccaf20
     );
-    animation: gradiente 64s linear infinite;
+    animation: gradiente 604s linear infinite;
     background-size: 60% 100%;
     -webkit-background-clip: text;
     text-align: center;

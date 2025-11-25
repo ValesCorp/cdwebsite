@@ -1,33 +1,16 @@
-html, body {
-    width: 100%;
-    overflow-x: hidden; /* Esto mata cualquier desbordamiento lateral */
-}
-
+/* estilos.css */
+/* Por Vales Corp */
+/*
+/* css para ajustes del cuerpo, medidas, etc. */
 * {
     padding: 0%;
     margin: 0%;
 }
 
 body {
-    /* background-color: #000000; */
+    background-color: #000000;
     background-image: url("../.././ui/fondo.webp");
     background-size: cover;
-}
-
-/*menú opaco y estilo vidrio*/
-.ui.menu {
-    border: 1px solid rgba(34, 36, 38, 0.15);
-    background-color: #000000bf !important;
-    backdrop-filter: blur(10px);
-    margin-bottom: 2px;
-    padding-bottom: 0.5%;
-    height: 40px;
-    position: fixed;
-    /* top: 0; */
-    width: 100%;/* 🔧 altura real del menú */
-    background: #111;
-    z-index: 1000;
-
 }
 
 #menu {
@@ -36,105 +19,6 @@ body {
     left: 50% !important;
     transform: translateX(-50%) !important;
     text-align: center !important;
-}
-/* Contenedor exterior: centra todo y permite escalar */
-/* Esto parece funcinar pero la responsibidad es un asco */
-/* .contenedor-externo { */
-/*     position: relative; */
-/*     width: 100%; */
-    /* min-height: 100vh; */
-/*     display: flex; */
-/*     justify-content: center; */
-/*     align-items: flex-start; */
-/*     overflow-x: hidden; */
-/*     overflow-y: auto; */
-/*     margin-bottom: -10%; */
-    /* padding-top: 0px; */
-/* } */
-
-/* Contenedor interno con tamaño base */
-/* .contenedor { */
-/*     position: relative; */
-/*     width: 1000px; */
-/*     height: 500px; */
-/*     transform-origin: top center; */
-/* } */
-
-/* Logo centrado arriba */
-/* #logo_principal { */
-/*     position: absolute; */
-/*     top: 20%; */
-/*     left: 50%; */
-/*     transform: translateX(-50%); */
-/*     z-index: 10; */
-/* } */
-
-/* #logo_principal img { */
-/*     width: 100%; */
-/*     height: auto; */
-/* } */
-
-/* Carrusel debajo del logo */
-/* #carrusel_principal { */
-/*     position: absolute; */
-/*     top: 30%;  */ /* 🔧 justo debajo del logo */
-/*     left: 45%; */
-/*     transform: translateX(-50%); */
-/* } */
-
-/* #carrusel_principal img { */
-/*     width: 120%; */
-/*     height: auto; */
-/*     border-radius: 20px; */
-/*     display: block; */
-/*     mask-image: */
-/*         linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%), */
-/*         linear-gradient(to left, transparent 0%, black 10%, black 90%, transparent 100%); */
-/*     mask-composite: intersect; */
-/*         -webkit-mask-image: */
-/*         linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%), */
-/*         linear-gradient(to left, transparent 0%, black 10%, black 90%, transparent 100%); */
-/*         -webkit-mask-composite: intersect; */
-/* } */
-
-.contenedor.ui.inverted.segment {
-    background-color: #000000;
-}
-
-#logo_principal {
-    position: relative;
-    padding-top: 12vh;
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
-    z-index: 10;
-}
-
-#logo_principal img {
-    width: 40vw;
-    height: auto;
-}
-
-/* Carrusel debajo del logo */
-#carrusel_principal {
-    position: relative;
-    margin-top: -15%;  /* justo debajo del logo */
-    /* left: 45%; */
-    /* transform: translateX(-50%); */
-}
-
-#carrusel_principal img {
-    width: 40vw;
-    height: auto;
-    border-radius: 20px;
-    display: block;
-    mask-image:
-        linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%),
-        linear-gradient(to left, transparent 0%, black 10%, black 90%, transparent 100%);
-    mask-composite: intersect;
-        -webkit-mask-image:
-        linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%),
-        linear-gradient(to left, transparent 0%, black 10%, black 90%, transparent 100%);
-        -webkit-mask-composite: intersect;
 }
 
 #menu_movil .right.menu {
@@ -153,29 +37,65 @@ body {
     line-height: 1;                     /* evita que empuje el texto */
 }
 
-/* Escalado proporcional con la pantalla */
-@media (max-width: 767px) {
-    .contenedor-externo {
+/* Escalado de elementos para pc, tablet y pantallas anchas */
+@media (min-width: 768px) {
+    #logo_principal {
         position: relative;
-        padding-top: -10px; /* mantiene el contenedor justo debajo del menú */
-    }
-
-    .contenedor {
-        position: relative;
-        height: 200px;
+        padding-top: 12vh;
+        z-index: 10;
     }
 
     #logo_principal img {
-        width: 100%;
+        width: 40vw;
         height: auto;
     }
 
-    #carrusel-principal {
-        width: 260%;
+    /* Carrusel debajo del logo */
+    #carrusel_principal {
+        position: relative;
+        margin-top: -15%;  /* justo debajo del logo */
+    }
+
+    #carrusel_principal img {
+        width: 40vw;
         height: auto;
     }
 }
 
+/* Escalado proporcional con la pantalla para fonos */
+@media (max-width: 767px) {
+    #contenedor-fono {
+        margin-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    #logo_principal img {
+        position: relative;
+        z-index: 10;
+    }
+
+    #carrusel_principal {
+        position: relative;
+        margin-top: -25%;
+    }
+
+    #promocional_movil p, #promocional_movil h1 {
+        line-height: 0.8;
+        padding-bottom: 0%;
+    }
+
+    #promocional_movil p {
+        margin: 0;
+    }
+
+    #promocional_movil {
+        margin-bottom: 10%;
+    }
+}
+
+#boton_principal span {
+    align-items: inline-block;
+}
 
 /* Solo para el index de construcción, luego borrar */
 

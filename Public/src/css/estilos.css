@@ -1,3 +1,8 @@
+/* estilos.css */
+/* Por Vales Corp */
+/*
+/* css para estilos solamente */
+
 /* @import url("https://cdn.jsdelivr.net/gh/YamiVales/Matrix-Book@main/font/Matrix-Book.otf"); */
 
 @font-face {
@@ -8,6 +13,32 @@
     font-style: normal;
 }
 
+/*menú opaco y estilo vidrio*/
+.ui.menu {
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    background-color: #000000bf !important;
+    backdrop-filter: blur(10px);
+    margin-bottom: 2px;
+    padding-bottom: 0.5%;
+    position: fixed;
+    background: #111;
+    z-index: 1000;
+
+}
+
+#carrusel_principal img {
+    border-radius: 20px;
+    display: block;
+    mask-image:
+        linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%),
+        linear-gradient(to left, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-composite: intersect;
+        -webkit-mask-image:
+        linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%),
+        linear-gradient(to left, transparent 0%, black 10%, black 90%, transparent 100%);
+        -webkit-mask-composite: intersect;
+}
+
 #galeria h1 {
     font-family: Matrix-Book;
 }
@@ -15,3 +46,7 @@
 #boton_principal {
     font-family: Matrix-Book;
 }
+
+/* #etiqueta_principal h1 { */
+/*     font-family: Matrix-Book !important; */
+/* } */

@@ -9,6 +9,7 @@
  *
  */
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin');
+@import url("https://cdn.jsdelivr.net/gh/YamiVales/Matrix-Book@main/font/Matrix-Book.otf");
 /*!
  * # Semantic UI 2.5.0 - Reset
  * http://github.com/semantic-org/semantic-ui/
@@ -580,7 +581,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Lato', 'Helvetica Neue', 'Matrix-Book', Arial, Helvetica, sans-serif;
   line-height: 1.28571429em;
   margin: calc(2rem -  0.14285714em ) 0em 1rem;
   font-weight: bold;
