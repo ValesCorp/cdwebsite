@@ -19,6 +19,7 @@ body {
     left: 50% !important;
     transform: translateX(-50%) !important;
     text-align: center !important;
+    z-index: 11;
 }
 
 #menu_movil .right.menu {
@@ -32,9 +33,17 @@ body {
     gap: 8px;                           /* espacio entre texto e icono */
 }
 
-.ui.button .material-symbols-outlined {
-    /* font-size: 24px;                     */ /* opcional: tamaño del icono */
+.ui.button .material-symbols-outlined {         */ /* opcional: tamaño del icono */
     line-height: 1;                     /* evita que empuje el texto */
+}
+
+#christian_death_button.ui.button {
+    font-size: 30px;
+}
+
+#boton_principal span {
+    display: block;
+    margin-bottom: 1px;
 }
 
 /* Escalado de elementos para pc, tablet y pantallas anchas */
@@ -78,19 +87,6 @@ body {
         position: relative;
         margin-top: -25%;
     }
-
-    #promocional_movil p, #promocional_movil h1 {
-        line-height: 0.8;
-        padding-bottom: 0%;
-    }
-
-    #promocional_movil p {
-        margin: 0;
-    }
-
-    #promocional_movil {
-        margin-bottom: 10%;
-    }
 }
 
 #boton_principal span {
@@ -106,3 +102,47 @@ body {
 #bocadito .item {
     padding-left: 30px;
 }
+
+/* Difumina el fondo */
+#overlayFullscreen {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(12px);
+  background: rgba(0,0,0,0.4);
+  display: none;
+  z-index: 900;
+}
+
+/* Overlay */
+#fsOverlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.4);
+  z-index: 900;
+}
+
+/* Menú fullscreen */
+#fsMenu {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: #1b1c1d;
+  z-index: 999;
+  padding-top: 4rem;
+  transition: top 0.3s ease;
+  border-radius: 0 !important;
+}
+
+#fsMenu.show {
+  top: 0;
+}
+
+#fsMenu .item {
+  font-size: 1.3rem;
+  padding: 1.3rem;
+}
+

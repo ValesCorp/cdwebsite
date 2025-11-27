@@ -1454,6 +1454,25 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 }
 
 /*-------------------
+       Stretch
+--------------------*/
+
+.ui.stretch.buttons .button,
+.ui.stretch.button {
+  padding: 0.0em 1.125em 0.10928571em;
+}
+
+.ui.stretch.icon.buttons .button,
+.ui.stretch.icon.button {
+  padding: 0.0em 0.58928571em 0.58928571em;
+}
+
+.ui.stretch.labeled.icon.buttons .button,
+.ui.stretch.labeled.icon.button {
+  padding: 0.0em 3.69642857em 0.58928571em;
+}
+
+/*-------------------
         Sizes
 --------------------*/
 

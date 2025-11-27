@@ -1,3 +1,9 @@
+/* componentes.css
+ *
+ * Vales Corp
+ *
+ * Para estilos aplicables en cualquier cosa, encontrarás desde formato de texto hasta efectos de texto, por eso son componentes
+ */
 .subrayado {
     text-decoration: underline;
 }
@@ -45,6 +51,78 @@
     background-size: 60% 100%;
     -webkit-background-clip: text;
     text-align: center;
+}
+
+.doradoespecial {
+    /* width: 300px; */
+    /* height: 80px; */
+    border: none;
+    border-radius: 40px;
+    background: linear-gradient(to right, #77530a, #ffd277, #77530a, #77530a, #ffd277, #77530a);
+    background-size: 250%;
+    background-position: left;
+    color: #ffd277;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 1s;
+    overflow: hidden;
+    text-decoration: none;
+    user-select: none;
+    /* font-size: 15px; */
+}
+
+.doradoespecial::before {
+    position: absolute;
+    content: "";
+    color: #ffd277;
+    inset: 3px;
+    border-radius: 40swift px;
+    background-color: rgba(0, 0, 0, 0.842);
+}
+
+.doradoespecial span {
+    z-index: 1;
+    display: block;
+}
+
+.doradoespecial:hover {
+    background-position: right;
+    transition-duration: 1s;
+}
+
+.doradoespecial:hover::before {
+    background-position: right;
+    transition-duration: 1s;
+}
+
+.doradoespecial:active {
+    transform: scale(0.95);
+}
+
+.svgdorado {
+    width: 40px;
+    height: 40px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    background: linear-gradient(
+        270deg,
+        #dfbd69,
+        #f7ef8a,
+        #ccaf20,
+        #d2ac47,
+        #edc967,
+        #dfbd69,
+        #ccaf20
+    );
+    background-size: 60% 100%;
+    animation: gradiente 604s linear infinite;
+    mask: url("../.././ui/cdlogo.svg") center/contain no-repeat;
+    -webkit-mask: url("../.././ui/cdlogo.svg") center/contain no-repeat;
 }
 
 .aquamarina {
@@ -172,4 +250,38 @@
         rgb(0, 0, 0) 6.37426px -2.89289px 0px,
         rgb(0, 0, 0) 6.72119px -1.95591px 0px,
         rgb(0, 0, 0) 6.93119px -0.979076px 0px;
+}
+
+.bordePulso {
+    animation: bordePulsante 3s infinite;
+}
+
+.brilloPulso {
+    animation: brilloPulsante 3s infinite;
+}
+
+/* Efecto de brillo pulsante en borde de elemento */
+@keyframes brilloPulsante {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.0);
+    }
+    25% {
+        box-shadow: 0 0 15px 5px rgba(255, 0, 0, 1);
+    }
+    50% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+    }
+}
+
+/* Efecto de borde pulsante, solido */
+@keyframes bordePulsante {
+    0%, 100% {
+        border: 2px solid transparent;
+    }
+    20% {
+        border: 2px solid #ffffff;
+    }
 }

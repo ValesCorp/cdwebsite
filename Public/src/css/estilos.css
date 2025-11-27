@@ -43,10 +43,50 @@
     font-family: Matrix-Book;
 }
 
-#boton_principal {
+.Matrix-Book {
     font-family: Matrix-Book;
 }
 
 /* #etiqueta_principal h1 { */
 /*     font-family: Matrix-Book !important; */
 /* } */
+
+.doradoespecial.ui.button {
+    border: none;
+    border-radius: 90px;
+    background: linear-gradient(to right, #77530a, #ffd277, #77530a, #77530a, #ffd277, #77530a);
+    background-size: 250%;
+    background-position: left;
+    color: #ffd277;
+    cursor: pointer;
+    transition-duration: 1s;
+    overflow: hidden;
+    text-decoration: none;
+    user-select: none;
+}
+
+.doradoespecial.ui.button::before {
+    content: "";
+    color: #ffd277;
+    border-radius: 90px;
+    background-color: rgba(0, 0, 0, 0.842);
+}
+
+.doradoespecial.ui.button span {
+    z-index: 1;
+    display: block;
+}
+
+.doradoespecial.ui.button:hover {
+    background-position: right;
+    transition-duration: 1s;
+}
+
+.doradoespecial.ui.button:hover::before {
+    background-position: right;
+    transition-duration: 1s;
+}
+
+.doradoespecial.ui.button:active {
+    transform: scale(0.95);
+}

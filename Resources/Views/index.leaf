@@ -30,7 +30,10 @@
                         <img class="ui micro image" src="./ui/cdlogo.svg"/>
                     </div>
                     <a href="#root" class="item"><span class="material-symbols-outlined">home</span></a>
-                    <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">music_cast</span><p>Listen</p></a>
+                    <a href="#" id="listenDropdown" class="ui dropdown item">
+                        <span class="material-symbols-outlined icon">music_cast</span>
+                        <p>Listen</p>
+                    </a>
                     <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">contacts</span>Contacts</a>
                     <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">history</span>Past Tour Dates</a>
                     <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">calendar_add_on</span>Upcoming Tour Dates</a>
@@ -65,14 +68,10 @@
                     </div>
                 </div>
                 <!-- Botón promocional -->
-                <div class="ui hidden divider"></div>
-                <div class="ui hidden divider"></div>
-                <div class="ui hidden divider"></div>
-                <div class="ui center inverted center aligned segment container">
-                    <div id="boton_principal" class="ui circular massive button">
-                        <span class="material-symbols-outlined">arrow_downward</span>
-                        <span class="dorado">Discover the world of Christian Death</span>
-                        <span class="material-symbols-outlined">arrow_downward</span>
+                <div class="ui inverted center aligned segment container">
+                    <div class="Matrix-Book dorado"><h1>Discover the world of Christian Death</h1></div>
+                    <div id="christian_death_button" class="doradoespecial medium ui circular button">
+                        <div class="svgdorado"></div>
                     </div>
                 </div>
                 <div class="ui hidden divider"></div>
@@ -87,19 +86,25 @@
                         <img class="ui centered image" src="https://raw.githubusercontent.com/YamiVales/servidor-de-imagenes/531815fedd85daa121db38ad4384c7469aed4ba4/sources/christiandeath/baner0.webp" alt="Banner"/>
                     </div>
                 </div>
-                <!-- Botón promocional -->
-                <div id="promocional_movil" class="ui inverted container">
-                    <div class="ui center aligned segment inverted container">
-                        <h1 id="etiqueta_principal" class="dorado">
-                            <p>Discover the world of</p>
-                            <p>Christian Death</p>
+                <div class="ui hidden divider"></div>
+                <div class="ui inverted center aligned segment container">
+                    <div id="" class="ui header grid">
+                        <h1 class="dorado">
+                            <span>Discover the world of Christian Death</span>
                         </h1>
-                        <div id="boton_principal" class="ui circular button">
-                            <span class="material-symbols-outlined">arrow_downward</span>
-                        </div>
+                    </div>
+                    <div class="ui hidden divider"></div>
+                    <div class="ui inverted center aligned segment container">
+                    <div id="christian_death_button" class="doradoespecial compact ui circular button">
+                        <div class="svgdorado"></div>
                     </div>
                 </div>
+                    <div class="ui hidden divider"></div>
+                    <div class="ui hidden divider"></div>
+                    <div class="ui hidden divider"></div>
+                </div>
             </div>
+            <div class="ui hidden divider"></div>
             <div id="cuerpo">
                 <div class="ui container">
                     <div class="ui inverted center aligned segment container">
@@ -112,6 +117,8 @@
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
+        <script scr="./src/js/funciones.js"></script>
     </body>
 </html>
+
 
