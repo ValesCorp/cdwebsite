@@ -39,7 +39,45 @@
                         <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">calendar_add_on</span>Upcoming Tour Dates</a>
                     </div>
                 </div>
+                <!-- aqui -->
+<div id="megaOverlay">
+    <div class="icloud-panel">
+        <h3 class="icloud-title">Aplicaciones</h3>
 
+        <div class="icloud-grid">
+            <div class="icloud-item">
+                <span class="material-symbols-outlined">mail</span>
+                <p>Mail</p>
+            </div>
+
+            <div class="icloud-item">
+                <span class="material-symbols-outlined">photo_library</span>
+                <p>Fotos</p>
+            </div>
+
+            <div class="icloud-item">
+                <span class="material-symbols-outlined">contacts</span>
+                <p>Contactos</p>
+            </div>
+
+            <div class="icloud-item">
+                <span class="material-symbols-outlined">calendar_month</span>
+                <p>Calendario</p>
+            </div>
+
+            <div class="icloud-item">
+                <span class="material-symbols-outlined">note</span>
+                <p>Notas</p>
+            </div>
+
+            <div class="icloud-item">
+                <span class="material-symbols-outlined">settings</span>
+                <p>Ajustes</p>
+            </div>
+        </div>
+    </div>
+</div>
+                <!-- aqui -->
             </div>
             <div class="mobile only ui grid">
                 <div id="menu_movil" class="ui top fixed borderless inverted menu">

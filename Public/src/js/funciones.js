@@ -5,11 +5,27 @@
 // Para funciones de página, van específicamente funciones, disparadores, etc.
 
 /* Open when someone clicks on the span element */
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-}
+$(document).ready(function () {
+                      const menu = document.querySelector('.ui.menu');
+const overlay = document.getElementById('megaOverlay');
 
-/* Close when someone clicks on the "x" symbol inside the overlay */
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-}
+menu.querySelectorAll('.item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        overlay.classList.add('active');
+    });
+
+    item.addEventListener('mouseleave', () => {
+        setTimeout(() => {
+            if (!menu.matches(':hover') && !overlay.matches(':hover')) {
+                overlay.classList.remove('active');
+            }
+        }, 60);
+    });
+});
+
+overlay.addEventListener('mouseleave', () => {
+    overlay.classList.remove('active');
+});
+
+                  }
+                  );
