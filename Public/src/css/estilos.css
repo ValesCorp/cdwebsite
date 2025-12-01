@@ -26,6 +26,10 @@
 
 }
 
+.ui.inverted.segment {
+    background-color: #000000ff;
+}
+
 #carrusel_principal img {
     border-radius: 20px;
     display: block;
