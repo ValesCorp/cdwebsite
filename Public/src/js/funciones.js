@@ -4,28 +4,32 @@
 //
 // Para funciones de página, van específicamente funciones, disparadores, etc.
 
-/* Open when someone clicks on the span element */
-$(document).ready(function () {
-                      const menu = document.querySelector('.ui.menu');
-const overlay = document.getElementById('megaOverlay');
+$(document).ready(function() {
+    const $slideshow = $('.slideshow');
+    const $slides = $slideshow.find('.slide');
+    const slideCount = $slides.length;
+    let currentIndex = 0;
 
-menu.querySelectorAll('.item').forEach(item => {
-    item.addEventListener('mouseenter', () => {
-        overlay.classList.add('active');
+    // Función para mostrar un slide
+    function showSlide(index) {
+        $slides.removeClass('active');
+        $slides.eq(index).addClass('active');
+    }
+
+    // Siguiente slide
+    $('.next').click(function() {
+        currentIndex = (currentIndex + 1) % slideCount;
+        showSlide(currentIndex);
     });
 
-    item.addEventListener('mouseleave', () => {
-        setTimeout(() => {
-            if (!menu.matches(':hover') && !overlay.matches(':hover')) {
-                overlay.classList.remove('active');
-            }
-        }, 60);
+    // Slide anterior
+    $('.prev').click(function() {
+        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+        showSlide(currentIndex);
     });
-});
 
-overlay.addEventListener('mouseleave', () => {
-    overlay.classList.remove('active');
+    // Avance automático (cada 3 segundos)
+    setInterval(function() {
+        $('.next').trigger('click');
+    }, $slideshow.data('interval') || 3000);
 });
-
-                  }
-                  );

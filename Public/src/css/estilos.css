@@ -30,7 +30,8 @@
     background-color: #000000ff;
 }
 
-#carrusel_principal img {
+/* aqui cambié de img a section */
+#carrusel_principal section {
     border-radius: 20px;
     display: block;
     mask-image:
