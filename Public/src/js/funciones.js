@@ -3,33 +3,55 @@
 // Vales Corp
 //
 // Para funciones de página, van específicamente funciones, disparadores, etc.
+document.addEventListener('DOMContentLoaded', function() {
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
 
-$(document).ready(function() {
-    const $slideshow = $('.slideshow');
-    const $slides = $slideshow.find('.slide');
-    const slideCount = $slides.length;
-    let currentIndex = 0;
-
-    // Función para mostrar un slide
-    function showSlide(index) {
-        $slides.removeClass('active');
-        $slides.eq(index).addClass('active');
-    }
-
-    // Siguiente slide
-    $('.next').click(function() {
-        currentIndex = (currentIndex + 1) % slideCount;
-        showSlide(currentIndex);
-    });
-
-    // Slide anterior
-    $('.prev').click(function() {
-        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
-        showSlide(currentIndex);
-    });
-
-    // Avance automático (cada 3 segundos)
-    setInterval(function() {
-        $('.next').trigger('click');
-    }, $slideshow.data('interval') || 3000);
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
 });
+$(document).ready(function() {
+    // create sidebar and attach to menu open
+    $("#primario.ui.sidebar").sidebar("attach events", ".toc.item");
+    $("#portafolio.ui.sidebar").sidebar("attach events", ".portafolio.item");
+    // tarjetas con blur
+    $('.special.cards .image').dimmer({
+        on: 'hover'
+    });
+    //blur para el slider
+    $('.slide .image').dimmer({
+        on: 'hover'
+    });
+    //menú dropdown
+    $('.ui.dropdown')
+        .dropdown()
+    ;
+    //acordeones
+    $('.ui.accordion')
+        .accordion()
+    ;
+    // popups
+    $('.ver.mas')
+        .popup()
+    ;
+    // Modal de aviso de privacidad xd
+    $('#avisoPrivacidad').click(function() {
+        $('#privacidad')
+            .modal('show')
+        ;
+    });
+    // Modal de aviso de bolsa de trabajop3 xd
+    $('#bolsaTrabajo').click(function() {
+        $('#bolsa')
+            .modal('show')
+        ;
+    });
+    $('.ui.sticky')
+        .sticky({
+            context: '#submenusticky',
+            pushing: true
+        });
+});
+

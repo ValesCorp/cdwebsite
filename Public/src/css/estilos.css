@@ -49,7 +49,7 @@
 }
 
 .Matrix-Book {
-    font-family: Matrix-Book;
+    font-family: Matrix-Book !important;
 }
 
 /* #etiqueta_principal h1 { */
@@ -94,4 +94,12 @@
 
 .doradoespecial.ui.button:active {
     transform: scale(0.95);
+}
+
+#contenedor-computadora {
+    background-color: #00000000;
+}
+
+#contenedor-fono{
+    background-color: #00000000;
 }

@@ -34,31 +34,40 @@ body {
     gap: 8px;                           /* espacio entre texto e icono */
 }
 
-.ui.button .material-symbols-outlined {         */ /* opcional: tamaño del icono */
+.ui.button .material-symbols-outlined {         /* opcional: tamaño del icono */
     line-height: 1;                     /* evita que empuje el texto */
 }
 
 #christian_death_button.ui.button {
     font-size: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-#boton_principal span {
-    display: block;
-    margin-bottom: 1px;
+.ui.hidden.divider.grande {
+    padding-top: 10%;
+}
+
+#historia .ui.big.header {
+    font-size: 5vw;
 }
 
 /* Escalado de elementos para pc, tablet y pantallas anchas */
 @media (min-width: 768px) {
     #contenedor-computadora {
         margin-top: -20px;
+        padding-bottom: 0px;
     }
+
     #logo_principal {
         position: relative;
         padding-top: 12vh;
         z-index: 10;
     }
 
-    #logo_principal img {
+    #logo_principal .contenedor_logo_principal img {
         width: 40vw;
         height: auto;
     }
@@ -93,10 +102,6 @@ body {
     }
 }
 
-#boton_principal span {
-    align-items: inline-block;
-}
-
 /* Solo para el index de construcción, luego borrar */
 
 #bocadito {
@@ -105,4 +110,56 @@ body {
 
 #bocadito .item {
     padding-left: 30px;
+}
+
+/* borrador */
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
 }
