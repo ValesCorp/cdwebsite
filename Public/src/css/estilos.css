@@ -103,3 +103,12 @@
 #contenedor-fono{
     background-color: #00000000;
 }
+
+
+.bocadito {
+    font-weight: normal !important;
+}
+
+.bocadito.masivo {
+    font-size: 80pt !important;
+}

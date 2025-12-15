@@ -10,5 +10,9 @@ func routes(_ app: Application) throws {
         "Hello, world!"
     }
 
+    app.get("listen") { req async throws in
+        try await req.view.render("./Secciones/listen", ["title": "Christian Death – Listen"])
+    }
+
     try app.register(collection: TodoController())
 }
