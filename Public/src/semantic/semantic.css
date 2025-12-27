@@ -13758,6 +13758,15 @@ img.ui.bordered.image {
      Sizes
 ---------------*/
 
+.ui.nano.images .image,
+.ui.nano.images img,
+.ui.nano.images svg,
+.ui.nano.image {
+  width: 8px;
+  height: auto;
+  font-size: 0.38571429rem;
+}
+
 .ui.micro.images .image,
 .ui.micro.images img,
 .ui.micro.images svg,

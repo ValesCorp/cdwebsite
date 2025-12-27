@@ -6,7 +6,7 @@
 /* @import url("https://cdn.jsdelivr.net/gh/YamiVales/Matrix-Book@main/font/Matrix-Book.otf"); */
 
 @font-face {
-    font-family: 'MatrixBook';
+    font-family: 'Matrix-Book';
     src: url('https://cdn.jsdelivr.net/gh/YamiVales/Matrix-Book@main/font/Matrix-Book.woff2') format('woff2'),
          url('https://cdn.jsdelivr.net/gh/YamiVales/Matrix-Book@main/font/Matrix-Book.woff') format('woff');
     font-weight: normal;
@@ -19,7 +19,7 @@
     background-color: #000000bf !important;
     backdrop-filter: blur(10px);
     margin-bottom: 2px;
-    padding-bottom: 0.5%;
+    padding-bottom: 3%;
     position: fixed;
     background: #111;
     z-index: 1000;
@@ -105,10 +105,24 @@
 }
 
 
-.bocadito {
-    font-weight: normal !important;
-}
+/* .bocadito { */
+/*     font-weight: normal !important; */
+/* } */
 
 .bocadito.masivo {
     font-size: 80pt !important;
+    font-weight: bold;
+}
+
+.bocadito.texto {
+    color: #ffffff;
+    text-align: center;
+}
+
+.ui.card {
+    background-color: #000000;
+}
+
+.ui.card:hover {
+    background-color: #000000 !important;
 }

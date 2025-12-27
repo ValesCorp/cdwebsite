@@ -14,10 +14,14 @@ body {
     background-size: cover;
 }
 
+.ui.top.fixed.menu .item {
+    padding-left: 8%;
+}
+
 #menu {
     display: flex;
     position: absolute !important;
-    left: 50% !important;
+    left: 40% !important;
     transform: translateX(-50%) !important;
     text-align: center !important;
     z-index: 11;
@@ -175,4 +179,69 @@ h1.ui.header {
 
 .bocadito.masivo p {
     line-height: 1.0pt;
+}
+
+.bocadito.texto p {
+    padding-top: 10%;
+    font-size: 20pt;
+    padding-bottom: 10%;
+}
+
+#music-logo {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* 1. Contenedor del vídeo */
+.video-background {
+  position: fixed; /* O 'absolute' si prefieres */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Detrás de todo */
+  overflow: hidden;
+}
+
+/* 2. Estilo del vídeo */
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* Rellena sin deformar */
+}
+
+/* 3. Asegurar que el contenido de Semantic UI esté encima */
+#cdmusic-texto{
+  position: relative;
+  z-index: 1;
+}
+
+#cdmusic_etiqueta {
+    padding-top: 5%;
+    padding-left: 24%;
+}
+
+.enlacep3 a:link {
+    color: #ffffff;
+}
+
+.ui.album.modal {
+    width: 40%;
+}
+
+.pedacito {
+    font-size: 20pt;
+    text-align: center;
+    padding-bottom: 5%;
+    padding: 10%;
+}
+
+.ui.card {
+    height: 100%;
 }
