@@ -46,6 +46,10 @@ body {
     line-height: 1;                     /* evita que empuje el texto */
 }
 
+.material-symbols-outlined {
+    vertical-align: -0.22em;
+}
+
 #christian_death_button.ui.button {
     font-size: 30px;
     padding-top: 15px;
@@ -65,7 +69,7 @@ body {
 /* Escalado de elementos para pc, tablet y pantallas anchas */
 @media (min-width: 768px) {
     #contenedor-computadora {
-        margin-top: -20px;
+        margin-top: -50px;
         padding-bottom: 0px;
     }
 

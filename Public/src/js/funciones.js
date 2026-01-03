@@ -45,6 +45,7 @@ $(document).ready(function () {
     $(".ui.accordion").accordion();
     // popups
     $(".ver.mas").popup();
+
     // Modals de albumes, uno por cada álbum
     // Evil Becomes Rule
     $("#img-ebr").click(function () {
@@ -94,6 +95,14 @@ $(document).ready(function () {
     $("#img-sdjc").click(function () {
         $("#modal-sdjc").modal("show");
     });
+    // Atrocities
+    $("#img-a").click(function () {
+        $("#modal-a").modal("show");
+    });
+    // Jesus Points the Bone at You?
+    $("#img-jptbay").click(function () {
+        $("#modal-jptbay").modal("show");
+    });
 
     // masAlbumes oculto por defecto
     if ($('#masAlbumes').hasClass('oculto')) {
@@ -105,12 +114,12 @@ $(document).ready(function () {
         $('#mostrarMas').on('click', function() {
             if ($('#masAlbumes').hasClass('oculto')) {
                 $('#masAlbumes').removeClass('oculto').fadeIn( );
-                $('#h1').text('Show less…');
-                $('#span').text('arrow_circle_up');
+                // $('#h1').text('Show less…');
+                $('#span').text('keyboard_arrow_down');
             } else {
                 $('#masAlbumes').addClass('oculto').fadeOut( );
-                $('#h1').text('Show more…');
-                $('#span').text('arrow_circle_down');
+                // $('#h1').text('Show more…');
+                $('#span').text('keyboard_arrow_right');
             }
         });
     });
