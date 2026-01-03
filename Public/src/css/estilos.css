@@ -104,19 +104,15 @@
     background-color: #00000000;
 }
 
-
-/* .bocadito { */
-/*     font-weight: normal !important; */
-/* } */
-
-.bocadito.masivo {
-    font-size: 80pt !important;
-    font-weight: bold;
+.bocadito.masivo h1.ui.header {
+    font-weight: bold !important;
 }
 
 .bocadito.texto {
     color: #ffffff;
     text-align: center;
+    font-size: 18pt;
+    opacity: 0.8;
 }
 
 .ui.card {
@@ -125,4 +121,17 @@
 
 .ui.card:hover {
     background-color: #000000 !important;
+}
+
+#mostrarMas {
+    cursor: pointer;
+}
+
+.enlace.blanco {
+    color: #ffffff;
+}
+
+#boton_escuchanos {
+    background-color: #f0233b;
+    color: #ffffff;
 }

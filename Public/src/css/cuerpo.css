@@ -14,7 +14,7 @@ body {
     background-size: cover;
 }
 
-.ui.top.fixed.menu .item {
+.ui.top.menu .item {
     padding-left: 8%;
 }
 
@@ -30,6 +30,10 @@ body {
 #menu_movil .right.menu {
     padding-right: 3%;
     padding-top: 1%;
+}
+
+#menu_movil {
+    padding-bottom: 0%;
 }
 
 .ui.button {
@@ -86,6 +90,17 @@ body {
         width: 40vw;
         height: auto;
     }
+
+    .bocadito.masivo h1.ui.header {
+        font-size: 8em !important;
+    }
+
+    .bocadito.texto p {
+        padding-top: 0%;
+        padding-bottom: 10%;
+        padding-left: 13%;
+        padding-right: 13%;
+    }
 }
 
 /* Escalado proporcional con la pantalla para fonos */
@@ -104,6 +119,16 @@ body {
         position: relative;
         margin-top: -25%;
     }
+
+    .bocadito.masivo h1.ui.header {
+        font-size: 3em !important;
+    }
+
+    .bocadito.texto p {
+        padding-top: 0%;
+        padding-bottom: 10%;
+        font-size: 0.8em!important;
+    }
 }
 
 /* Solo para el index de construcción, luego borrar */
@@ -114,48 +139,6 @@ body {
 
 #bocadito .item {
     padding-left: 30px;
-}
-
-/* borrador */
-.overlay {
-  height: 0%;
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
-  overflow-y: hidden;
-  transition: 0.5s;
-}
-
-.overlay-content {
-  position: relative;
-  top: 25%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-}
-
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
-}
-
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
 }
 
 @media screen and (max-height: 450px) {
@@ -172,21 +155,6 @@ body {
     padding-top: 10%;
 }
 
-h1.ui.header {
-    font-size: 30pt !important;
-    font-weight: normal !important;
-}
-
-.bocadito.masivo p {
-    line-height: 1.0pt;
-}
-
-.bocadito.texto p {
-    padding-top: 10%;
-    font-size: 20pt;
-    padding-bottom: 10%;
-}
-
 #music-logo {
     display: inline-block;
     vertical-align: middle;
@@ -194,41 +162,42 @@ h1.ui.header {
 
 /* 1. Contenedor del vídeo */
 .video-background {
-  position: fixed; /* O 'absolute' si prefieres */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Detrás de todo */
-  overflow: hidden;
+    position: fixed; /* O 'absolute' si prefieres */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Detrás de todo */
+    overflow: hidden;
 }
 
 /* 2. Estilo del vídeo */
 .video-background video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
-  object-fit: cover; /* Rellena sin deformar */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Rellena sin deformar */
 }
 
 /* 3. Asegurar que el contenido de Semantic UI esté encima */
 #cdmusic-texto{
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
 }
 
-#cdmusic_etiqueta {
+#cdmusic_encabezado {
+
     padding-top: 5%;
     padding-left: 24%;
 }
 
-.enlacep3 a:link {
-    color: #ffffff;
+.enlacep3 {
+    color: #ffffff !important;
 }
 
 .ui.album.modal {
@@ -244,4 +213,46 @@ h1.ui.header {
 
 .ui.card {
     height: 100%;
+}
+
+/* Menú cortina? */
+
+/* Estilo de la cortina desplegable */
+.cortina {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  min-width: 200px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 12px 12px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1000;
+}
+
+.cortina.activa {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.cortina .item {
+  color: white;
+  padding: 1rem 1.5rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background-color 0.3s, padding-left 0.3s;
+}
+
+.cortina .item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-left: 2rem;
+}
+
+.botoncito.right.floated.column {
+    padding-right: 10%;
 }

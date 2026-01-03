@@ -94,4 +94,53 @@ $(document).ready(function () {
     $("#img-sdjc").click(function () {
         $("#modal-sdjc").modal("show");
     });
+
+    // masAlbumes oculto por defecto
+    if ($('#masAlbumes').hasClass('oculto')) {
+        $('#masAlbumes').hide();
+    }
+
+    // Para ocultar y desocultar los albumes
+    $(document).ready(function() {
+        $('#mostrarMas').on('click', function() {
+            if ($('#masAlbumes').hasClass('oculto')) {
+                $('#masAlbumes').removeClass('oculto').fadeIn( );
+                $('#h1').text('Show less…');
+                $('#span').text('arrow_circle_up');
+            } else {
+                $('#masAlbumes').addClass('oculto').fadeOut( );
+                $('#h1').text('Show more…');
+                $('#span').text('arrow_circle_down');
+            }
+        });
+    });
+    //Cortina?
+
+    $(document).ready(function() {
+        // Al pasar el mouse sobre un item del menú
+        $('.ui.menu .item').mouseenter(function() {
+            const targetId = $(this).data('target');
+            const dropdown = $('#' + targetId);
+
+            // Cerrar otras cortinas
+            $('.cortina').removeClass('activa');
+
+            // Abrir la cortina correspondiente
+            dropdown.addClass('activa');
+        });
+
+        // Cerrar cortina al salir del menú o la cortina
+        $('.ui.menu, .cortina').mouseleave(function(e) {
+            if (!$(e.relatedTarget).closest('.cortina').length) {
+            $('.cortina').removeClass('activa');
+            }
+        });
+
+      // Cerrar al hacer click fuera
+        $(document).click(function(e) {
+            if (!$(e.target).closest('.ui.menu, .cortina').length) {
+                $('.cortina').removeClass('activa');
+            }
+        });
+    });
 });
