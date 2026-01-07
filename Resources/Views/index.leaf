@@ -45,7 +45,7 @@
                         <a href="/music" class="item">
                             <span class="material-symbols-outlined icon">music_cast</span>&nbsp;Music
                         </a>
-                        <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">contacts</span>&nbsp;Contacts</a>
+                        <a href="/contacts" class="item"><span class="material-symbols-outlined">contacts</span>&nbsp;Contacts</a>
                         <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">history</span>&nbsp;Past Tour Dates</a>
                         <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">calendar_add_on</span>&nbsp;Upcoming Tour Dates</a>
                     </div>

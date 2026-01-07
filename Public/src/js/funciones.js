@@ -123,8 +123,8 @@ $(document).ready(function () {
             }
         });
     });
-    //Cortina?
 
+    //Cortina?
     $(document).ready(function() {
         // Al pasar el mouse sobre un item del menú
         $('.ui.menu .item').mouseenter(function() {

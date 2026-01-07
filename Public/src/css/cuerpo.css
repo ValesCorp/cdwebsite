@@ -227,7 +227,6 @@ body {
   top: 100%;
   left: 0;
   background-color: rgba(0, 0, 0, 0.95);
-  min-width: 200px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   border-radius: 0 0 12px 12px;
   overflow: hidden;
@@ -236,6 +235,10 @@ body {
   transform: translateY(-10px);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 1000;
+  padding-left: 200%;
+  padding-right: 200%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .cortina.activa {
@@ -259,4 +262,8 @@ body {
 
 .botoncito.right.floated.column {
     padding-right: 10%;
+}
+
+#contactos {
+    padding-top: 10%;
 }
