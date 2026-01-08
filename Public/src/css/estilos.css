@@ -5,12 +5,19 @@
 
 /* @import url("https://cdn.jsdelivr.net/gh/YamiVales/Matrix-Book@main/font/Matrix-Book.otf"); */
 
+/* @import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin'); */
+
 @font-face {
     font-family: 'Matrix-Book';
     src: url('https://cdn.jsdelivr.net/gh/YamiVales/Matrix-Book@main/font/Matrix-Book.woff2') format('woff2'),
          url('https://cdn.jsdelivr.net/gh/YamiVales/Matrix-Book@main/font/Matrix-Book.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
 }
 
 /*menú opaco y estilo vidrio*/
@@ -50,6 +57,10 @@
 
 .Matrix-Book {
     font-family: Matrix-Book !important;
+}
+
+.Helvetica-Neue {
+    font-family: 'Helvetica Neue' !important;
 }
 
 /* #etiqueta_principal h1 { */
@@ -108,6 +119,10 @@
     font-weight: bold !important;
 }
 
+.bocadito.medio h1.ui.header {
+    font-weight: normal !important;
+}
+
 .bocadito.texto {
     color: #ffffff;
     text-align: center;
@@ -134,4 +149,8 @@
 #boton_escuchanos {
     background-color: #f0233b;
     color: #ffffff;
+}
+
+a.enlace:hover {
+    color: #d00;
 }

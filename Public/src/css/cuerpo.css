@@ -99,6 +99,14 @@ body {
         font-size: 8em !important;
     }
 
+    .bocadito.medio h1.ui.header {
+        font-size: 5em !important;
+    }
+
+    h1.bocadito.pequeño {
+        font-size: 4em !important;
+    }
+
     .bocadito.texto p {
         padding-top: 0%;
         padding-bottom: 10%;
