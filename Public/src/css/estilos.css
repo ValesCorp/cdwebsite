@@ -154,3 +154,7 @@
 a.enlace:hover {
     color: #d00;
 }
+
+.texto.grande {
+    font-size: 1.5em;
+}

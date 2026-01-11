@@ -12,4 +12,3 @@ run-command=
 default=true
 
 [default.environment]
-PATH=$PATH:/home/davidvales/.local/share/swiftly/env.sh

@@ -8,9 +8,9 @@
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
         <meta name="application-name" content="Christian Death – Official Website"/>
         <meta name="yandex-verification" content="c68591104eff7335"/>
-        <link rel="icon" href="./ui/favicon.ico" type="image/x-icon">
-        <link rel="shortcut icon" href="./ui/favicon.ico" type="image/x-icon">
-        <link rel="manifest" href="./manifest.json"/>
+        <link rel="icon" href="./ui/favicon.ico" type="image/x-icon"></link>
+        <link rel="shortcut icon" href="./ui/favicon.ico" type="image/x-icon"></link>
+        <link rel="manifest" href="./manifest.json"></link>
         <meta name="description" content="Darkness does not always mean evil. Sometimes it is the refuge of the soul."/>
         <meta name="keywords" content="music, christian death, valor kand, gothic, gothic rock, deathrock, maitri nicolai, dark, black, art, underground"/>
         <meta name="author" content="Vales Corp"/>
@@ -155,6 +155,7 @@
                 <div class="ui hidden divider"></div>
             </div>
             <!-- Para fono -->
+            <!-- Aqui empieza el contenido para fonos -->
             <div class="mobile only ui grid">
                 <div id="contenedor-fono" class="ui inverted center aligned segment container">
                     <div id="logo_principal">
@@ -183,7 +184,6 @@
                                                     <button class="ui inverted button">Ver más</button>
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div>
                                 </li>
@@ -245,25 +245,84 @@
                     <div class="ui hidden divider"></div>
                 </div>
             </div>
+            <!-- Aquí termina contenido para fonos -->
             <div class="ui inverted segment">
                 <div class="ui hidden divider grande"></div>
             </div>
-            <div id="cuerpo">
-                <div class="ui container">
-                    <div id="historia" class="ui inverted center aligned segment container">
-                        <h1 class="ui big header Matrix-Book">In the begining</h1>
-                        <div class="reveal-container">
-                            <div class="reveal-item">
-                                <img src="tu-obra.jpg" alt="Obra de Christian Death">
-                                <h3>Título de la obra</h3>
-                            </div>
+            <!-- Aquí va el contenido de la mini historia -->
+            <!-- Aquí empieza contenido de la mini historia -->
+            <div id="cuerpo" class="ui inverted segment container">
+                <div class="ui two column grid container">
+                    <!-- Inicia historia, fila 1 -->
+                    <div id="escena_uno" class="oculto row">
+                        <div class="column">
+                            <h1 class="bocadito pequeño">In the begining…</h1>
+                            <p class="texto grande justificado">
+                                No one dared to talk about the world, about
+                                its decadence, about all the wrong that
+                                society dictates.
+                                Everyone remained silent, following the orders
+                                imposed without asking, years and decades of false
+                                morality, horror music and fairy tales that more than
+                                scared gave laughter, until…
+                            </p>
                         </div>
-                        <!-- Repetir para cada elemento que quieras animar -->
+                        <div class="difuminado escena uno column">
+                            <video class="historia" autoplay muted playsinline>
+                                <source src="./ui/inthebegining.mp4" type="video/mp4"/>
+                            </video>
+                        </div>
                     </div>
+                    <!-- Termina fila 1 -->
+                    <!-- Fila 2 -->
+                    <div id="escena_dos" class="oculto row">
+                        <div class="difuminado escena dos column">
+                            <video class="historia" autoplay muted playsinline>
+                                <source src="./ui/therewassining.mp4" type="video/mp4"/>
+                            </video>
+                        </div>
+                        <div class="column">
+                            <h1 class="bocadito pequeño">There was sining…</h1>
+                            <p class="texto grande justificado">
+                                no one dared to talk about the world, about its
+                                decadence, about all the wrong that society dictates.
+                                Everyone remained silent, following the orders imposed
+                                without asking, years and decades of false morality,
+                                horror music and fairy tales that more than scared gave laughter, until…
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Termina fila 2 -->
+                    <!-- Inicia fila 3 -->
+                    <div id="escena_tres" class="oculto row">
+                        <div class="column">
+                            <h1 class="bocadito pequeño">And in the end well…</h1>
+                            <p class="texto grande justificado">
+                                Many hated them, others loved them, so the gap was
+                                already open for everyone, everyone who wanted to
+                                get out of social mediocrity and discover a world of
+                                possibilities, without anyone telling them anything,
+                                and if someone tries to judge them then…
+                            </p>
+                        </div>
+                        <div class="difuminado escena tres column">
+                            <video class="historia" autoplay muted playsinline>
+                                <source src="./ui/andintheendwell.mp4" type="video/mp4"/>
+                            </video>
+                        </div>
+                    </div>
+                    <!-- Termina fila 3 -->
+                    <!-- Inicia fila 4 -->
+                    <div id="escena_cuatro" class="escena cuatro oculto ui sixteen wide center aligned column">
+                        <h1 class="centrado bocadito pequeño">Let's pretend…</h1>
+                        <video class="historia final" autoplay muted playsinline>
+                            <source src="./ui/letspretend.mp4" type="video/mp4"/>
+                        </video>
+                    </div>
+                    <!-- Termina fila 4 -->
                 </div>
             </div>
         </div>
-
         <!-- Inicio de pié de página -->
         <div class="ui inverted vertical footer segment">
                 <div class="ui container">
@@ -296,10 +355,12 @@
                         </div>
                     </div>
                 </div>
+        </div>
         <!-- Fin de pié de página -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
         <script src="./src/js/funciones.js"></script>
         <script src="./src/js/carrusel.js"></script>
+        <script src="./src/js/historia.js"></script>
     </body>
 </html>
