@@ -1,4 +1,4 @@
-/home/davidvales/Proyectos/cdwebsite /*
+/* /home/davidvales/Proyectos/cdwebsite  */ /*
  * # Semantic UI - 2.5.0
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -10,6 +10,7 @@
  */
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin');
 @import url("https://cdn.jsdelivr.net/gh/YamiVales/Matrix-Book@main/font/Matrix-Book.otf");
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
 /*!
  * # Semantic UI 2.5.0 - Reset
  * http://github.com/semantic-org/semantic-ui/
@@ -5236,10 +5237,10 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 .ui.divider.inverted,
 .ui.divider.inverted:after,
 .ui.divider.inverted:before {
-  border-top-color: rgba(34, 36, 38, 0.15) !important;
-  border-left-color: rgba(34, 36, 38, 0.15) !important;
-  border-bottom-color: rgba(255, 255, 255, 0.15) !important;
-  border-right-color: rgba(255, 255, 255, 0.15) !important;
+  border-top-color: rgba(255, 255, 255, 0.3) !important;
+  border-left-color: rgba(255, 255, 255, 0.3) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.3) !important;
+  border-right-color: rgba(255, 255, 255, 0.3) !important;
 }
 
 /*--------------
@@ -13757,6 +13758,15 @@ img.ui.bordered.image {
 /*--------------
      Sizes
 ---------------*/
+
+.ui.nano.images .image,
+.ui.nano.images img,
+.ui.nano.images svg,
+.ui.nano.image {
+  width: 8px;
+  height: auto;
+  font-size: 0.38571429rem;
+}
 
 .ui.micro.images .image,
 .ui.micro.images img,

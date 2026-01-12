@@ -64,5 +64,3 @@ function fntExecuteSlide(side) {
         elements[nextElement].style.zIndex = 1;
   });
 }
-
-

@@ -3,33 +3,153 @@
 // Vales Corp
 //
 // Para funciones de página, van específicamente funciones, disparadores, etc.
+$(document).ready(function () {
+    // fija el menu cuando pasas la página
+    $(".masthead").visibility({
+        once: false,
+        //oculta y desoculta el menu según la clase "movil" o "computadora"
+        onBottomPassed: function () {
+            $("#menuComputadora").transition("fade in");
+            $("#menuMovil").transition("fade in");
+        },
+        onBottomPassedReverse: function () {
+            $("#menuComputadora").transition("fade out");
+            $("#menuMovil").transition("fade out");
+        },
+    });
+    $(".secondhead").visibility({
+        once: false,
+        //oculta y desoculta el menu según la clase "movil" o "computadora"
+        onBottomPassed: function () {
+            $("#menuComputadora").transition("fade in");
+            $("#menuMovil").transition("fade in");
+        },
+        onBottomPassedReverse: function () {
+            $("#menuComputadora").transition("fade out");
+            $("#menuMovil").transition("fade out");
+        },
+    });
+    // create sidebar and attach to menu open
+    $(".ui.sidebar").sidebar("attach events", ".toc.item");
+    // tarjetas con blur
+    $(".special.cards .image").dimmer({
+        on: "hover",
+    });
+    //blur para el slider
+    $(".slide .image").dimmer({
+        on: "hover",
+    });
+    //menú dropdown
+    $(".ui.dropdown").dropdown();
+    //acordeones
+    $(".ui.accordion").accordion();
+    // popups
+    $(".ver.mas").popup();
 
-$(document).ready(function() {
-    const $slideshow = $('.slideshow');
-    const $slides = $slideshow.find('.slide');
-    const slideCount = $slides.length;
-    let currentIndex = 0;
+    // Modals de albumes, uno por cada álbum
+    // Evil Becomes Rule
+    $("#img-ebr").click(function () {
+        $("#modal-ebr").modal("show");
+    });
+    // The Root Of All Evilution
+    $("#img-troae").click(function () {
+        $("#modal-troae").modal("show");
+    });
+    // American Inquisition
+    $("#img-ai").click(function () {
+        $("#modal-ai").modal("show");
+    });
+    // Born Again Anti-Christian
+    $("#img-baac").click(function () {
+        $("#modal-baac").modal("show");
+    });
+    // Pornographic Messiah
+    $("#img-pm").click(function () {
+        $("#modal-pm").modal("show");
+    });
+    // Prophecies
+    $("#img-p").click(function () {
+        $("#modal-p").modal("show");
+    });
+    // Sexy Death God
+    $("#img-sdg").click(function () {
+        $("#modal-sdg").modal("show");
+    });
+    // Insanus, Ultio, Proditio, Misericordiaque
+    $("#img-iupm").click(function () {
+        $("#modal-iupm").modal("show");
+    });
+    // All the Love All the Hate (Part One: All the Love)
+    $("#img-atlath1").click(function () {
+        $("#modal-atlath1").modal("show");
+    });
+    // All the Love All the Hate (Part One: All the Hate)
+    $("#img-atlath2").click(function () {
+        $("#modal-atlath2").modal("show");
+    });
+    // The Scriptures
+    $("#img-ts").click(function () {
+        $("#modal-ts").modal("show");
+    });
+    // Sexy Death God
+    $("#img-sdjc").click(function () {
+        $("#modal-sdjc").modal("show");
+    });
+    // Atrocities
+    $("#img-a").click(function () {
+        $("#modal-a").modal("show");
+    });
+    // Jesus Points the Bone at You?
+    $("#img-jptbay").click(function () {
+        $("#modal-jptbay").modal("show");
+    });
 
-    // Función para mostrar un slide
-    function showSlide(index) {
-        $slides.removeClass('active');
-        $slides.eq(index).addClass('active');
+    // masAlbumes oculto por defecto
+    if ($('#masAlbumes').hasClass('oculto')) {
+        $('#masAlbumes').hide();
     }
 
-    // Siguiente slide
-    $('.next').click(function() {
-        currentIndex = (currentIndex + 1) % slideCount;
-        showSlide(currentIndex);
+    // Para ocultar y desocultar los albumes
+    $(document).ready(function() {
+        $('#mostrarMas').on('click', function() {
+            if ($('#masAlbumes').hasClass('oculto')) {
+                $('#masAlbumes').removeClass('oculto').fadeIn( );
+                // $('#h1').text('Show less…');
+                $('#span').text('keyboard_arrow_down');
+            } else {
+                $('#masAlbumes').addClass('oculto').fadeOut( );
+                // $('#h1').text('Show more…');
+                $('#span').text('keyboard_arrow_right');
+            }
+        });
     });
 
-    // Slide anterior
-    $('.prev').click(function() {
-        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
-        showSlide(currentIndex);
-    });
+    //Cortina?
+    $(document).ready(function() {
+        // Al pasar el mouse sobre un item del menú
+        $('.ui.menu .item').mouseenter(function() {
+            const targetId = $(this).data('target');
+            const dropdown = $('#' + targetId);
 
-    // Avance automático (cada 3 segundos)
-    setInterval(function() {
-        $('.next').trigger('click');
-    }, $slideshow.data('interval') || 3000);
+            // Cerrar otras cortinas
+            $('.cortina').removeClass('activa');
+
+            // Abrir la cortina correspondiente
+            dropdown.addClass('activa');
+        });
+
+        // Cerrar cortina al salir del menú o la cortina
+        $('.ui.menu, .cortina').mouseleave(function(e) {
+            if (!$(e.relatedTarget).closest('.cortina').length) {
+            $('.cortina').removeClass('activa');
+            }
+        });
+
+      // Cerrar al hacer click fuera
+        $(document).click(function(e) {
+            if (!$(e.target).closest('.ui.menu, .cortina').length) {
+                $('.cortina').removeClass('activa');
+            }
+        });
+    });
 });

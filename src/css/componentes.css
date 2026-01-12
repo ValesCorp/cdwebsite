@@ -305,3 +305,34 @@
         border: 2px solid #ffffff;
     }
 }
+
+.espaciado {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.redondeado {
+    border-radius: 25px !important;
+}
+
+.vidrio.negro {
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    background-color: #0000007a !important;
+    backdrop-filter: blur(10px);
+    margin-bottom: 2px;
+    padding-bottom: 3%;
+    background: #111;
+}
+
+.difuminado {
+    border-radius: 20px;
+    display: block;
+    mask-image:
+        linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%),
+        linear-gradient(to left, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-composite: intersect;
+        -webkit-mask-image:
+        linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%),
+        linear-gradient(to left, transparent 0%, black 10%, black 90%, transparent 100%);
+        -webkit-mask-composite: intersect;
+}

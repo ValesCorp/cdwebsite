@@ -5,12 +5,19 @@
 
 /* @import url("https://cdn.jsdelivr.net/gh/YamiVales/Matrix-Book@main/font/Matrix-Book.otf"); */
 
+/* @import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin'); */
+
 @font-face {
-    font-family: 'MatrixBook';
+    font-family: 'Matrix-Book';
     src: url('https://cdn.jsdelivr.net/gh/YamiVales/Matrix-Book@main/font/Matrix-Book.woff2') format('woff2'),
          url('https://cdn.jsdelivr.net/gh/YamiVales/Matrix-Book@main/font/Matrix-Book.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
 }
 
 /*menú opaco y estilo vidrio*/
@@ -19,7 +26,7 @@
     background-color: #000000bf !important;
     backdrop-filter: blur(10px);
     margin-bottom: 2px;
-    padding-bottom: 0.5%;
+    padding-bottom: 3%;
     position: fixed;
     background: #111;
     z-index: 1000;
@@ -49,7 +56,11 @@
 }
 
 .Matrix-Book {
-    font-family: Matrix-Book;
+    font-family: Matrix-Book !important;
+}
+
+.Helvetica-Neue {
+    font-family: 'Helvetica Neue' !important;
 }
 
 /* #etiqueta_principal h1 { */
@@ -94,4 +105,56 @@
 
 .doradoespecial.ui.button:active {
     transform: scale(0.95);
+}
+
+#contenedor-computadora {
+    background-color: #00000000;
+}
+
+#contenedor-fono{
+    background-color: #00000000;
+}
+
+.bocadito.masivo h1.ui.header {
+    font-weight: bold !important;
+}
+
+.bocadito.medio h1.ui.header {
+    font-weight: normal !important;
+}
+
+.bocadito.texto {
+    color: #ffffff;
+    text-align: center;
+    font-size: 18pt;
+    opacity: 0.8;
+}
+
+.ui.card {
+    background-color: #000000;
+}
+
+.ui.card:hover {
+    background-color: #000000 !important;
+}
+
+#mostrarMas {
+    cursor: pointer;
+}
+
+.enlace.blanco {
+    color: #ffffff;
+}
+
+#boton_escuchanos {
+    background-color: #f0233b;
+    color: #ffffff;
+}
+
+a.enlace:hover {
+    color: #d00;
+}
+
+.texto.grande {
+    font-size: 1.5em;
 }
