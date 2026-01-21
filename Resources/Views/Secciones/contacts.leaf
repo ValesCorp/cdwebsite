@@ -1,3 +1,8 @@
+<!-- contacts.leaf
+
+     Creado por Vales Corp en enero 2026
+
+     Página para contactos de la banda Christian Death -->
 <!doctype html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
     <head>
@@ -25,58 +30,61 @@
     </head>
     <body id="root">
         <!-- Aqui se supone que deberia de ir el menu lateral -->
-
+        <!-- Cortina móvil -->
+        <div id="cortina_movil" class="insanus">
+            <div class="list">
+                <div class="item"><a href="/music">Music</a></div>
+                <div class="item"><a href="/contacts">Contacts</a></div>
+                <div class="item"><a href="/pastTourDates">Past Tour Dates</a></div>
+                <div class="item"><a href="/upcomingTourDates">Upcoming Tour Dates</a></div>
+                <div class="item"><a href="/socialNetworks">Social Networks</a></div>
+            </div>
+        </div>
         <div class="ui container">
+            <!-- Empieza menú pc -->
             <div class="computer only ui tablet only grid">
-              <!-- Menú principal para pc y pantallas grandes -->
                 <div class="ui top fixed borderless inverted menu">
                     <div id="menu">
                         <a href="/" class="item">
                             <img class="ui micro image" src="./ui/cdlogo.svg"/>
                         </a>
-                        <a href="/music" class="item" data-target="cortina_musica">
+                        <a id="music" href="/music" class="item">
                             <span class="material-symbols-outlined icon">music_cast</span>&nbsp;Music
                         </a>
-                        <a href="/contacts" class="item" data-target="cortina_contactos"><span class="material-symbols-outlined">contacts</span>&nbsp;Contacts</a>
-                        <a href="#" class="item" data-target="cortina_proxfechas"><span class="material-symbols-outlined">history</span>&nbsp;Past Tour Dates</a>
-                        <a href="#" class="item"><span class="material-symbols-outlined">calendar_add_on</span>&nbsp;Upcoming Tour Dates</a>
-                        <!-- Cortinas desplegables -->
-                        <div class="cortina" id="cortina_musica">
-                            <a class="item">Discografía</a>
-                            <a class="item">Vídeos</a>
-                            <a class="item">Letras</a>
-                        </div>
-                        <div class="cortina" id="cortina_contactos">
-                            <a class="item">Email</a>
-                            <a class="item">Redes sociales</a>
-                            <a class="item">Booking</a>
-                        </div>
-                        <div class="cortina" id="cortina_proxfechas">
-                            <a class="item">Próximas</a>
-                            <a class="item">Pasadas</a>
-                            <a class="item">Festivales</a>
-                        </div>
+                        <a id="contacts" href="/contacts" class="item">
+                            <span class="material-symbols-outlined">contacts</span>&nbsp;Contacts
+                        </a>
+                        <a id="past" href="/pastTourDates" class="item">
+                            <span class="material-symbols-outlined">history</span>&nbsp;Past Tour Dates
+                        </a>
+                        <a id="upcoming" href="/upcomingTourDates" class="item">
+                            <span class="material-symbols-outlined">calendar_add_on</span>&nbsp;Upcoming Tour Dates
+                        </a>
+                        <a id="socialnetworks" href="/socialNetworks" class="item">
+                            <span class="material-symbols-outlined">globe</span>&nbsp;Social Networks
+                        </a>
                     </div>
                 </div>
             </div>
-            <!-- Menú movil -->
+            <!-- Termina menú pc -->
+            <!-- Empieza menú movil -->
             <div class="mobile only ui grid">
                 <div id="menu_movil" class="ui top fixed borderless inverted menu">
-                    <div class="item">
+                    <div id="menu_christian_death_logo" class="item">
                         <img class="ui micro image" src="./ui/cdlogo.svg"/>
                     </div>
                     <div class="right menu">
-                        <div class="item">
+                        <div id="buscar" class="item">
                             <span class="material-symbols-outlined">search</span>
                         </div>
-                        <div class="item">
-                            <!-- cambio aqui para la funcion del menu cortina -->
+                        <div id="boton_menu_movil" class="item">
                             <!-- Por alguna razon si le pongo la clase "toc item" el menu se hace mas grande, TODO: checar los estilos del toc item -->
-                            <a href="#"><span class="material-symbols-outlined">menu</span></a>
+                            <a href="#"><span id="span_menu" class="material-symbols-outlined">menu</span></a>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Termina menú movil -->
         </div>
         <!-- Aqui empieza el contenido de la página -->
         <div class="ui inverted center aligned segment container">
@@ -87,7 +95,7 @@
         <!-- Sección de contactos -->
         <!-- Inicia sesión de contactos -->
         <div class="ui inverted segment container">
-            <div class="ui two column grid">
+            <div class="ui two column stackable grid">
                 <!-- Inicio fila de Managers -->
                 <h1 class="bocadito pequeño">Management</h1>
                 <div class="row">
@@ -266,5 +274,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
         <script src="./src/js/funciones.js"></script>
         <script src="./src/js/carrusel.js"></script>
+        <script src="./src/js/menu.js"></script>
     </body>
 </html>

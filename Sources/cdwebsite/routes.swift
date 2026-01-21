@@ -18,5 +18,13 @@ func routes(_ app: Application) throws {
         try await req.view.render("./Secciones/contacts", ["title": "Christian Death – Contacts"])
     }
 
+    app.get("pastTourDates") { req async throws in
+        try await req.view.render("./Secciones/pastTourDates", ["title": "Christian Death – Past Tour Dates"])
+    }
+
+    app.get("upcomingTourDates") { req async throws in
+        try await req.view.render("./Secciones/upcomingTourDates", ["title": "Christian Death – Upcoming Tour Dates"])
+    }
+
     try app.register(collection: TodoController())
 }

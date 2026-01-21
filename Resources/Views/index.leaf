@@ -20,55 +20,114 @@
         <link type="text/css" rel="stylesheet" href="./src/css/componentes.css"></link>
         <link type="text/css" rel="stylesheet" href="./src/css/estilos.css"></link>
         <link type="text/css" rel="stylesheet" href="./src/css/carrusel.css"></link>
+        <link type="text/css" rel="stylesheet" href="./src/css/historia.css"></link>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
     </head>
     <body id="root">
-        <!-- Aqui se supone que deberia de ir el menu lateral -->
-        <!-- Menú lateral -->
-        <div id="myNav" class="overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="overlay-content">
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Clients</a>
-                <a href="#">Contact</a>
+        <!-- Cortinas -->
+        <!-- Cortina móvil -->
+        <div id="cortina_movil" class="insanus">
+            <div class="list">
+                <div class="item"><a href="/music">Music</a></div>
+                <div class="item"><a href="/contacts">Contacts</a></div>
+                <div class="item"><a href="/pastTourDates">Past Tour Dates</a></div>
+                <div class="item"><a href="/upcomingTourDates">Upcoming Tour Dates</a></div>
+                <div class="item"><a href="/socialNetworks">Social Networks</a></div>
             </div>
         </div>
+        <!-- Cortina música -->
+        <div id="cortina_musica" class="proditio">
+            <div class="list">
+                <div class="item titulo">Listen us on</div>
+                <div class="item opcion"><a href="/music">Apple Music</a></div>
+                <div class="item opcion"><a href="/contacts">Spotify</a></div>
+                <div class="item opcion"><a href="/pastDates">YouTube Music</a></div>
+                <div class="item opcion"><a href="/upcomingDates">Deezer</a></div>
+            </div>
+        </div>
+        <!-- Cortina contactos -->
+        <div id="cortina_contactos" class="sexy">
+            <div class="list">
+                <div class="item titulo">Our contacts</div>
+                <div class="item opcion"><a href="/contacts">Management</a></div>
+                <div class="item opcion"><a href="/contacts">Bookings North & South America</a></div>
+                <div class="item opcion"><a href="/contacts">Bookings Europe</a></div>
+                <div class="item opcion"><a href="/contacts">General Information</a></div>
+            </div>
+        </div>
+        <!-- Cortina eventos pasados -->
+        <div id="cortina_eventos_pasados" class="pornographic">
+            <div class="list">
+                <div class="item titulo">Checkout our past dates</div>
+                <div class="item opcion"><a href="/contacts">05.12.2025, CDMX, Foro Indie Rocks</a></div>
+                <div class="item opcion"><a href="/contacts">11.12.2025, Argentina, Unione E Benevolenza</a></div>
+                <div class="item opcion"><a href="/contacts">11.10.2024, Brazil, Vivo Río</a></div>
+                <div class="item opcion"><a href="/contacts">13.10.2024, Brazil, Carioca Club</a></div>
+            </div>
+        </div>
+        <div id="cortina_proximos_eventos" class="allTheLove">
+            <div class="list">
+                <div class="item titulo">Checkout our next events</div>
+                <div class="item opcion"><a href="/contacts">Actually no one</a></div>
+            </div>
+        </div>
+        <div id="cortina_redes_sociales" class="theRootOfAll">
+            <div class="list">
+                <div class="item titulo">Find us in</div>
+                <div class="item opcion"><a href="https://www.facebook.com/christiandeath" target="blank">Facebook</a></div>
+                <div class="item opcion"><a href="https://www.instagram.com/christiandeath.official/" target="blank">Instagram</a></div>
+                <div class="item opcion"><a href="https://www.youtube.com/@christiandeath5266/videos" target="blank">YouTube</a></div>
+                <div class="item opcion"><a href="https://www.tiktok.com/@christiandeathofficial" target="blank">TikTok</a></div>
+            </div>
+        </div>
+        <!-- Este div es para hacer el efecto de degradado cuando se abre una cortina y quieres ocultar el contenido debajo -->
+        <!-- <div id="difuminadop3"></div> -->
         <!-- Menú principal para pc y pantallas grandes -->
         <div class="ui container">
+            <!-- Empieza menú pc -->
             <div class="computer only ui tablet only grid">
                 <div class="ui top fixed borderless inverted menu">
                     <div id="menu">
                         <a href="/" class="item">
                             <img class="ui micro image" src="./ui/cdlogo.svg"/>
                         </a>
-                        <a href="/music" class="item">
+                        <a id="music" href="/music" class="item">
                             <span class="material-symbols-outlined icon">music_cast</span>&nbsp;Music
                         </a>
-                        <a href="/contacts" class="item"><span class="material-symbols-outlined">contacts</span>&nbsp;Contacts</a>
-                        <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">history</span>&nbsp;Past Tour Dates</a>
-                        <a href="./paginas/nosotros.html" class="item"><span class="material-symbols-outlined">calendar_add_on</span>&nbsp;Upcoming Tour Dates</a>
+                        <a id="contacts" href="/contacts" class="item">
+                            <span class="material-symbols-outlined">contacts</span>&nbsp;Contacts
+                        </a>
+                        <a id="past" href="/pastTourDates" class="item">
+                            <span class="material-symbols-outlined">history</span>&nbsp;Past Tour Dates
+                        </a>
+                        <a id="upcoming" href="/upcomingTourDates" class="item">
+                            <span class="material-symbols-outlined">calendar_add_on</span>&nbsp;Upcoming Tour Dates
+                        </a>
+                        <a id="socialnetworks" href="/socialNetworks" class="item">
+                            <span class="material-symbols-outlined">globe</span>&nbsp;Social Networks
+                        </a>
                     </div>
                 </div>
             </div>
-            <!-- Menú movil -->
+            <!-- Termina menú pc -->
+            <!-- Empieza menú movil -->
             <div class="mobile only ui grid">
                 <div id="menu_movil" class="ui top fixed borderless inverted menu">
-                    <div class="item">
+                    <div id="menu_christian_death_logo" class="item">
                         <img class="ui micro image" src="./ui/cdlogo.svg"/>
                     </div>
                     <div class="right menu">
-                        <div class="item">
+                        <div id="buscar" class="item">
                             <span class="material-symbols-outlined">search</span>
                         </div>
-                        <div class="item">
-                            <!-- cambio aqui para la funcion del menu cortina -->
+                        <div id="boton_menu_movil" class="item">
                             <!-- Por alguna razon si le pongo la clase "toc item" el menu se hace mas grande, TODO: checar los estilos del toc item -->
-                            <a href="#"><span class="material-symbols-outlined">menu</span></a>
+                            <a href="#"><span id="span_menu" class="material-symbols-outlined">menu</span></a>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Termina menú movil -->
         </div>
         <!-- Aqui empieza el contenido de la página -->
         <div class="ui container">
@@ -147,8 +206,8 @@
                          </section>
                         <!-- <img class="ui centered image" src="https://raw.githubusercontent.com/YamiVales/servidor-de-imagenes/531815fedd85daa121db38ad4384c7469aed4ba4/sources/christiandeath/baner0.webp" alt="Banner"/> -->
                     </div>
-                    <div class="Matrix-Book dorado"><h1>Discover the world of Christian Death</h1></div>
-                    <div id="christian_death_button" class="brilloPulso doradoespecial ui circular button">
+                    <div class="dorado"><h1 class="Matrix-Book">Discover the world of Christian Death</h1></div>
+                    <div id="" class="christian_death_button brilloPulso doradoespecial ui circular button">
                         <div class="svgdorado"></div>
                     </div>
                 </div>
@@ -209,7 +268,6 @@
                                                     <button class="ui inverted button">Ver más</button>
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div>
                                 </li>
@@ -252,7 +310,10 @@
             <!-- Aquí va el contenido de la mini historia -->
             <!-- Aquí empieza contenido de la mini historia -->
             <div id="cuerpo" class="ui inverted segment container">
-                <div class="ui two column grid container">
+                <div id="historia" class="ui two column stackable grid container">
+                    <div id="escena_uno_preludio" clas="sixteen wide row">
+                        <div class="ui hidden divider"></div>
+                    </div>
                     <!-- Inicia historia, fila 1 -->
                     <div id="escena_uno" class="oculto row">
                         <div class="column">
@@ -273,8 +334,16 @@
                             </video>
                         </div>
                     </div>
+                    <div class="sixteen wide center aligned column">
+                        <div id="" class="christian_death_button brilloPulso doradoespecial ui circular button">
+                            <div class="svgdorado"></div>
+                        </div>
+                    </div>
                     <!-- Termina fila 1 -->
-                    <!-- Fila 2 -->
+                    <div id="separador_escena_uno" class="sixteen wide row">
+                        <div class="ui hidden divider"></div>
+                    </div>
+                    <!-- Empieza fila 2 -->
                     <div id="escena_dos" class="oculto row">
                         <div class="difuminado escena dos column">
                             <video class="historia" autoplay muted playsinline>
@@ -293,6 +362,15 @@
                         </div>
                     </div>
                     <!-- Termina fila 2 -->
+                    <div id="separador_escena_dos" class="sixteen wide row">
+                        <div class="ui hidden divider"></div>
+                        <div class="ui hidden divider"></div>
+                    </div>
+                    <div class="sixteen wide center aligned column">
+                        <div id="" class="christian_death_button brilloPulso doradoespecial ui circular button">
+                            <div class="svgdorado"></div>
+                        </div>
+                    </div>
                     <!-- Inicia fila 3 -->
                     <div id="escena_tres" class="oculto row">
                         <div class="column">
@@ -312,6 +390,15 @@
                         </div>
                     </div>
                     <!-- Termina fila 3 -->
+                    <div class="sixteen wide center aligned column">
+                        <div id="" class="christian_death_button brilloPulso doradoespecial ui circular button">
+                            <div class="svgdorado"></div>
+                        </div>
+                    </div>
+                    <div id="separador_escena" class="sixteen wide row">
+                        <div class="ui hidden divider"></div>
+                        <div class="ui hidden divider"></div>
+                    </div>
                     <!-- Inicia fila 4 -->
                     <div id="escena_cuatro" class="escena cuatro oculto ui sixteen wide center aligned column">
                         <h1 class="centrado bocadito pequeño">Let's pretend…</h1>
@@ -320,6 +407,10 @@
                         </video>
                     </div>
                     <!-- Termina fila 4 -->
+                    <div id="separador_escena" class="sixteen wide row">
+                        <div class="ui hidden divider"></div>
+                        <div class="ui hidden divider"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -353,6 +444,9 @@
                                 </a>
                             </p>
                         </div>
+                        <div class="three wide column">
+                            COPYRIGHT © 2026 CHRISTIAN DEATH. ALL RIGHTS RESERVED. CLOSED SOURCE
+                        </div>
                     </div>
                 </div>
         </div>
@@ -361,6 +455,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
         <script src="./src/js/funciones.js"></script>
         <script src="./src/js/carrusel.js"></script>
-        <script src="./src/js/historia.js"></script>
+        <script src="./src/js/menu.js"></script>
     </body>
 </html>
+
