@@ -65,12 +65,14 @@
                 <div class="item opcion"><a href="/contacts">13.10.2024, Brazil, Carioca Club</a></div>
             </div>
         </div>
+        <!-- Cortina próximos eventos -->
         <div id="cortina_proximos_eventos" class="allTheLove">
             <div class="list">
                 <div class="item titulo">Checkout our next events</div>
                 <div class="item opcion"><a href="/contacts">Actually no one</a></div>
             </div>
         </div>
+        <!-- Cortina redes sociales -->
         <div id="cortina_redes_sociales" class="theRootOfAll">
             <div class="list">
                 <div class="item titulo">Find us in</div>
@@ -317,8 +319,8 @@
                     <!-- Inicia historia, fila 1 -->
                     <div id="escena_uno" class="oculto row">
                         <div class="column">
-                            <h1 class="bocadito pequeño">In the begining…</h1>
-                            <p class="texto grande justificado">
+                            <h1 class="Matrix-Book bocadito pequeño">In the begining…</h1>
+                            <p class="SF Pro Display texto grande justificado">
                                 No one dared to talk about the world, about
                                 its decadence, about all the wrong that
                                 society dictates.
@@ -351,8 +353,8 @@
                             </video>
                         </div>
                         <div class="column">
-                            <h1 class="bocadito pequeño">There was sining…</h1>
-                            <p class="texto grande justificado">
+                            <h1 class="Matrix-Book bocadito pequeño">There was sining…</h1>
+                            <p class="SF Pro Display texto grande justificado">
                                 no one dared to talk about the world, about its
                                 decadence, about all the wrong that society dictates.
                                 Everyone remained silent, following the orders imposed
@@ -374,8 +376,8 @@
                     <!-- Inicia fila 3 -->
                     <div id="escena_tres" class="oculto row">
                         <div class="column">
-                            <h1 class="bocadito pequeño">And in the end well…</h1>
-                            <p class="texto grande justificado">
+                            <h1 class="Matrix-Book bocadito pequeño">And in the end well…</h1>
+                            <p class="SF Pro Display texto grande justificado">
                                 Many hated them, others loved them, so the gap was
                                 already open for everyone, everyone who wanted to
                                 get out of social mediocrity and discover a world of
@@ -401,7 +403,7 @@
                     </div>
                     <!-- Inicia fila 4 -->
                     <div id="escena_cuatro" class="escena cuatro oculto ui sixteen wide center aligned column">
-                        <h1 class="centrado bocadito pequeño">Let's pretend…</h1>
+                        <h1 class="Matrix-Book centrado bocadito pequeño">Let's pretend…</h1>
                         <video class="historia final" autoplay muted playsinline>
                             <source src="./ui/letspretend.mp4" type="video/mp4"/>
                         </video>

@@ -97,13 +97,13 @@
         <div class="ui inverted segment container">
             <div class="ui two column stackable grid">
                 <!-- Inicio fila de Managers -->
-                <h1 class="bocadito pequeño">Management</h1>
+                <h1 class="Matrix-Book bocadito pequeño">Management</h1>
                 <div class="row">
                     <div class="column">
-                        <h2 class="Helvetica Neue">
+                        <h2 class="SF Pro Display">
                             World Entertaiment Inc.
                         </h2>
-                        <h2 class="Helvetica Neue">
+                        <h2 class="SF Pro Display">
                             <a class="enlace" href="https://worldentertainmentinc.com/" target="blank" style="text-decoration: underline;">
                                 <span class="material-symbols-outlined">globe</span>: https://worldentertainmentinc.com
                             </a>
@@ -119,14 +119,14 @@
                     </div>
                     <div class="column">
                         <div class="row">
-                            <h2 class="Helvetica Neue">Gunter Ford</h2>
+                            <h2 class="SF Pro Display">Gunter Ford</h2>
                             <a class="enlace" href="mailto:gunter@worldentertainmentinc.com" target="blank" style="text-decoration: underline;">
-                                <h3 class="Helvetica Neue"><span class="material-symbols-outlined">mail</span>: gunter@worldentertainmentinc.com</h3>
+                                <h3 class="SF Pro Display"><span class="material-symbols-outlined">mail</span>: gunter@worldentertainmentinc.com</h3>
                             </a>
                         </div>
                         <div class="ui hidden divider"></div>
                         <div class="row">
-                            <h2 class="Helvetica Neue">Alexander Ford</h2>
+                            <h2 class="SF Pro Display">Alexander Ford</h2>
                             <a class="enlace" href="mailto:alexander@worldentertainmentinc.com" style="text-decoration: underline;">
                                 <h3>
                                     <p><span class="material-symbols-outlined">mail</span>: alexander@worldentertainmentinc.com</p>
@@ -142,10 +142,10 @@
                     </div>
                 </div>
                 <!-- Inicio fila Bookings North and South America -->
-                <h1 class="bocadito pequeño">Bookings North and South America</h1>
+                <h1 class="Matrix-Book bocadito pequeño">Bookings North and South America</h1>
                 <div class="row">
                     <div class="column">
-                        <h2 class="Helvetica Neue">
+                        <h2 class="SF Pro Display">
                             Artist Worldwide Agency
                         </h2>
                         <a class="enlace" href="http://www.artistww.com/" target="blank" style="text-decoration: underline;">
@@ -164,7 +164,7 @@
                     </div>
                     <div class="column">
                         <div class="row">
-                            <h2 class="Helvetica Neue">Chuck Bernal</h2>
+                            <h2 class="SF Pro Display">Chuck Bernal</h2>
                             <a class="enlace" href="mailto:chuck@artistww.com" target="blank">
                                 <h3 class="Helvetica Neue"><span class="material-symbols-outlined">mail</span>: chuck@artistww.com</h3>
                             </a>
@@ -178,10 +178,10 @@
                     </div>
                 </div>
                 <!-- Inicio fila Bookings North and South America -->
-                <h1 class="bocadito pequeño">Bookings Europe</h1>
+                <h1 class="Matrix-Book bocadito pequeño">Bookings Europe</h1>
                 <div class="row">
                     <div class="column">
-                        <h2 class="Helvetica Neue">
+                        <h2 class="SF Pro Display">
                             Echelon Talent Agency Ltd.
                         </h2>
                         <a class="enlace" href="#" target="blank" style="text-decoration: underline;">
@@ -197,7 +197,7 @@
                     </div>
                     <div class="column">
                         <div class="row">
-                            <h2 class="Helvetica Neue">Stephen Moss</h2>
+                            <h2 class="SF Pro Display">Stephen Moss</h2>
                             <a class="enlace" href="mailto:stephen@echelontalent.agency" target="blank">
                                 <h3 class="Helvetica Neue"><span class="material-symbols-outlined">mail</span>: stephen@echelontalent.agency</h3>
                             </a>
@@ -211,10 +211,10 @@
                     </div>
                 </div>
                 <!-- Inicia fila de contacto general -->
-                <h1 class="bocadito pequeño">General Information</h1>
+                <h1 class="Matrix-Book bocadito pequeño">General Information</h1>
                 <div class="row">
                     <div class="column">
-                        <h2 class="Helvetica Neue">
+                        <h2 class="SF Pro Display">
                             Christian Death
                         </h2>
                         <a class="enlace" href="#" target="blank" style="text-decoration: underline;">
@@ -225,9 +225,37 @@
                     </div>
                     <div class="column">
                         <div class="row">
-                            <h2 class="Helvetica Neue">Christian Death</h2>
+                            <h2 class="SF Pro Display">Christian Death</h2>
                             <a class="enlace" href="mailto:info@officialchristiandeath.com" target="blank">
                                 <h3 class="Helvetica Neue"><span class="material-symbols-outlined">mail</span>: info@officialchristiandeath.com</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Termina fila de contacto general -->
+                <div class="row">
+                    <div class="sixteen wide column">
+                        <div class="ui divider inverted"></div>
+                    </div>
+                </div>
+                <!-- Inicia fila de contacto webmaster -->
+                <h1 class="Matrix-Book bocadito pequeño">Webmaster</h1>
+                <div class="row">
+                    <div class="column">
+                        <h2 class="SF Pro Display">
+                            Vales Corp
+                        </h2>
+                        <a class="enlace" href="#" target="blank" style="text-decoration: underline;">
+                           <h3>
+                               <span class="material-symbols-outlined">globe</span>: https://valescorp.org
+                           </h3>
+                        </a>
+                    </div>
+                    <div class="column">
+                        <div class="row">
+                            <h2 class="SF Pro Display">David Vales</h2>
+                            <a class="enlace" href="mailto:davidvales@valescorp.org" target="blank">
+                                <h3 class="Helvetica Neue"><span class="material-symbols-outlined">mail</span>: davidvales@valescorp.org</h3>
                             </a>
                         </div>
                     </div>

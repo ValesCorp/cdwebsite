@@ -50,39 +50,48 @@ $(document).ready(function () {
         }
     });
 
+    var tiempoEspera; // variable para guardar tiempo de espera de apertura del menú
+    var estaEncima = false;
+
     // Función cuando entra el cursor sobre los elementos con id
     // Entra cursor sobre elemento con id musica
     // En cada mouse enter después de mostrar la cortina respectiva, se deben ocultar todas las demás por defecto.
     //
     // Muestrar cortina música y oculta las demás
     $('#music').mouseenter(function () {
-        if($('#cortina_musica').hasClass('proditio')) { // Evalúa si tiene la clase proditio
-            $('#cortina_musica')
-                .removeClass('proditio') // Remueve clase proditio de cortina_musica
-                .addClass('misericordiaque') // agrega clase misericordiaque de cortina_musica
-                .slideDown(400); // muestra cortina_musica
-            ;
-            $('#cortina_contactos')
-                .removeClass('death') // remueve clase death de cortina_contactos
-                .addClass('sexy') // agrega clase sexy a cortina_contactos
-                .slideUp(400) // oculta cortina_contactos
-            ;
-            $('#cortina_eventos_pasados')
-                .removeClass('messiah') // remueve clase messiah de eventos pasados
-                .addClass('pornographic') // agrega clase pornographic a eventos pasados
-                .slideUp(400) // oculta cortina_contactos
-            ;
-            $('#cortina_proximos_eventos')
-                .removeClass('allTheHate') // remueve clase allTheHate de proximos eventos
-                .addClass('allTheLove') // agrega la clase allTheLove de proximos eventos
-                .slideUp(400) // oculta cortina_contactos
-            ;
-            $('#cortina_redes')
-                .removeClass('evilution') // remueve clase evilution de redes
-                .addClass('theRootOfAll') // agrega clase the rootOfAll de redes
-                .slideUp(400) // oculta cortina_contactos
-            ;
-        }
+        clearTimeout(tiempoEspera); // pone el tiempo de espera
+        estaEncima = true; // detecta que el cursor esta encima de la función
+        tiempoEspera = setTimeout(function () {
+            if(estaEncima) {
+                if($('#cortina_musica').hasClass('proditio')) { // Evalúa si tiene la clase proditio
+                    $('#cortina_musica')
+                        .removeClass('proditio') // Remueve clase proditio de cortina_musica
+                        .addClass('misericordiaque') // agrega clase misericordiaque de cortina_musica
+                        .slideDown(400); // muestra cortina_musica
+                    ;
+                    $('#cortina_contactos')
+                        .removeClass('death') // remueve clase death de cortina_contactos
+                        .addClass('sexy') // agrega clase sexy a cortina_contactos
+                        .slideUp(400) // oculta cortina_contactos
+                    ;
+                    $('#cortina_eventos_pasados')
+                        .removeClass('messiah') // remueve clase messiah de eventos pasados
+                        .addClass('pornographic') // agrega clase pornographic a eventos pasados
+                        .slideUp(400) // oculta cortina_contactos
+                    ;
+                    $('#cortina_proximos_eventos')
+                        .removeClass('allTheHate') // remueve clase allTheHate de proximos eventos
+                        .addClass('allTheLove') // agrega la clase allTheLove de proximos eventos
+                        .slideUp(400) // oculta cortina_contactos
+                    ;
+                    $('#cortina_redes')
+                        .removeClass('evilution') // remueve clase evilution de redes
+                        .addClass('theRootOfAll') // agrega clase the rootOfAll de redes
+                        .slideUp(400) // oculta cortina_contactos
+                    ;
+                }
+            }
+        }, 350); // 300 milisegundos de espera para la función
     });
     // Ocultar cortina música
     $('#cortina_musica').mouseleave(function () {
@@ -97,33 +106,40 @@ $(document).ready(function () {
 
     // Muestra cortina contactos
     $('#contacts').mouseenter(function () {
-        if($('#cortina_contactos').hasClass('sexy')) { // Evalúa si tiene la clase sexy
-            $('#cortina_contactos')
-                .removeClass('sexy') // Remueve clase sexy de cortina_contactos
-                .addClass('death') // Agrega clase death a cortina_contactos
-                .slideDown(400) // Muestra cortina_contactos
-            ;
-            $("#cortina_musica")
-                .removeClass('misericordiaque') // Remueve clase misericordiaque de cortina_musica
-                .addClass('proditio') // Agrega clase proditio a cortina_musica
-                .slideUp(400) // Oculta cortina_musica
-            ;
-            $('#cortina_eventos_pasados')
-                .removeClass('messiah') // remueve clase messiah de eventos pasados
-                .addClass('pornographic') // agrega clase pornographic a eventos pasados
-                .slideUp(400) // oculta cortina_contactos
-            ;
-            $('#cortina_proximos_eventos')
-                .removeClass('allTheHate') // remueve clase allTheHate de proximos eventos
-                .addClass('allTheLove') // agrega clase allTheLove de proximos eventos
-                .slideUp(400) // oculta cortina_contactos
-            ;
-            $('#cortina_redes_sociales')
-                .removeClass('evilution') // remueve clase evlution
-                .addClass('theRootOfAll') // agrega clase theRootOfAll
-                .slideUp(400) // oculta cortina_contactos
-            ;
-        }
+        clearTimeout(tiempoEspera); // pone el tiempo de espera
+        estaEncima = true; // detecta que el cursor esta encima de la función
+        tiempoEspera = setTimeout(function () {
+            if(estaEncima) {
+                if($('#cortina_contactos').hasClass('sexy')) { // Evalúa si tiene la clase sexy
+                    $('#cortina_contactos')
+                        .removeClass('sexy') // Remueve clase sexy de cortina_contactos
+                        .addClass('death') // Agrega clase death a cortina_contactos
+                        .slideDown(400) // Muestra cortina_contactos
+                    ;
+                    $("#cortina_musica")
+                        .removeClass('misericordiaque') // Remueve clase misericordiaque de cortina_musica
+                        .addClass('proditio') // Agrega clase proditio a cortina_musica
+                        .slideUp(400) // Oculta cortina_musica
+                    ;
+                    $('#cortina_eventos_pasados')
+                        .removeClass('messiah') // remueve clase messiah de eventos pasados
+                        .addClass('pornographic') // agrega clase pornographic a eventos pasados
+                        .slideUp(400) // oculta cortina_contactos
+                    ;
+                    $('#cortina_proximos_eventos')
+                        .removeClass('allTheHate') // remueve clase allTheHate de proximos eventos
+                        .addClass('allTheLove') // agrega clase allTheLove de proximos eventos
+                        .slideUp(400) // oculta cortina_contactos
+                    ;
+                    $('#cortina_redes_sociales')
+                        .removeClass('evilution') // remueve clase evlution
+                        .addClass('theRootOfAll') // agrega clase theRootOfAll
+                        .slideUp(400) // oculta cortina_contactos
+                    ;
+                }
+            }
+        }, 350);
+
     });
     // Ocultar cortina contactos
     $('#cortina_contactos').mouseleave(function () {
@@ -137,33 +153,39 @@ $(document).ready(function () {
     });
     // Muestra cortina eventos pasados
     $('#past').mouseenter(function () {
-        if($('#cortina_eventos_pasados').hasClass('pornographic')) { // Evalúa si tiene la clase pornographic
-            $('#cortina_eventos_pasados')
-                .removeClass('pornographic') // Remueve clase sexy de cortina_contactos
-                .addClass('messiah') // Agrega clase death a cortina_contactos
-                .slideDown(400) // Muestra cortina_contactos
-            ;
-            $("#cortina_musica")
-                .removeClass('misericordiaque') // Remueve clase misericordiaque de cortina_musica
-                .addClass('proditio') // Agrega clase proditio a cortina_musica
-                .slideUp(400) // Oculta cortina_musica
-            ;
-            $('#cortina_contactos')
-                .removeClass('death') // remueve clase death de cortina_contactos
-                .addClass('sexy') // agrega clase sexy a cortina_contactos
-                .slideUp(400) // oculta cortina_contactos
-            ;
-            $('#cortina_proximos_eventos')
-                .removeClass('allTheHate') // remueve clase death de cortina_contactos
-                .addClass('allTheLove') // agrega clase sexy a cortina_contactos
-                .slideUp(400) // oculta cortina_contactos
-            ;
-            $('#cortina_redes_sociales')
-                .removeClass('evilution') // remueve clase death de cortina_contactos
-                .addClass('theRootOfAll') // agrega clase sexy a cortina_contactos
-                .slideUp(400) // oculta cortina_contactos
-            ;
-        }
+        clearTimeout(tiempoEspera); // pone el tiempo de espera
+        estaEncima = true; // detecta que el cursor esta encima de la función
+        tiempoEspera = setTimeout(function () {
+            if(estaEncima) {
+                if($('#cortina_eventos_pasados').hasClass('pornographic')) { // Evalúa si tiene la clase pornographic
+                    $('#cortina_eventos_pasados')
+                        .removeClass('pornographic') // Remueve clase sexy de cortina_contactos
+                        .addClass('messiah') // Agrega clase death a cortina_contactos
+                        .slideDown(400) // Muestra cortina_contactos
+                    ;
+                    $("#cortina_musica")
+                        .removeClass('misericordiaque') // Remueve clase misericordiaque de cortina_musica
+                        .addClass('proditio') // Agrega clase proditio a cortina_musica
+                        .slideUp(400) // Oculta cortina_musica
+                    ;
+                    $('#cortina_contactos')
+                        .removeClass('death') // remueve clase death de cortina_contactos
+                        .addClass('sexy') // agrega clase sexy a cortina_contactos
+                        .slideUp(400) // oculta cortina_contactos
+                    ;
+                    $('#cortina_proximos_eventos')
+                        .removeClass('allTheHate') // remueve clase death de cortina_contactos
+                        .addClass('allTheLove') // agrega clase sexy a cortina_contactos
+                        .slideUp(400) // oculta cortina_contactos
+                    ;
+                    $('#cortina_redes_sociales')
+                        .removeClass('evilution') // remueve clase death de cortina_contactos
+                        .addClass('theRootOfAll') // agrega clase sexy a cortina_contactos
+                        .slideUp(400) // oculta cortina_contactos
+                    ;
+                }
+            }
+        }, 350);
     });
     // Ocultar cortina eventos pasados
     $('#cortina_eventos_pasados').mouseleave(function () {
@@ -176,33 +198,40 @@ $(document).ready(function () {
 
     // Muestra cortina proximos eventos
     $('#upcoming').mouseenter(function () {
-        if($('#cortina_proximos_eventos').hasClass('allTheLove')) { // Evalúa si tiene la clase pornographic
-            $('#cortina_proximos_eventos')
-                .removeClass('allTheLove') // Remueve clase sexy de cortina_contactos
-                .addClass('allTheHate') // Agrega clase death a cortina_contactos
-                .slideDown(400) // Muestra cortina_contactos
-            ;
-            $("#cortina_musica")
-                .removeClass('misericordiaque') // Remueve clase misericordiaque de cortina_musica
-                .addClass('proditio') // Agrega clase proditio a cortina_musica
-                .slideUp(400) // Oculta cortina_musica
-            ;
-            $('#cortina_contactos')
-                .removeClass('death') // remueve clase death de cortina_contactos
-                .addClass('sexy') // agrega clase sexy a cortina_contactos
-                .slideUp(400) // oculta cortina_contactos
-            ;
-            $('#cortina_eventos_pasados')
-                .removeClass('messiah') // remueve clase messiah de eventos pasados
-                .addClass('pornographic') // agrega clase pornographic a eventos pasados
-                .slideUp(400) // oculta cortina eventos pasados
-            ;
-            $('#cortina_redes_sociales')
-                .removeClass('evilution') // remueve clase evilution de redes sociales
-                .addClass('theRootOfAll') // agrega clase theRootOfAll a redes sociales
-                .slideUp(400) // oculta cortina redes
-            ;
-        }
+        clearTimeout(tiempoEspera); // pone el tiempo de espera
+        estaEncima = true; // detecta que el cursor esta encima de la función
+        tiempoEspera = setTimeout(function () {
+            if(estaEncima) {
+                if($('#cortina_proximos_eventos').hasClass('allTheLove')) { // Evalúa si tiene la clase pornographic
+                    $('#cortina_proximos_eventos')
+                        .removeClass('allTheLove') // Remueve clase sexy de cortina_contactos
+                        .addClass('allTheHate') // Agrega clase death a cortina_contactos
+                        .slideDown(400) // Muestra cortina_contactos
+                    ;
+                    $("#cortina_musica")
+                        .removeClass('misericordiaque') // Remueve clase misericordiaque de cortina_musica
+                        .addClass('proditio') // Agrega clase proditio a cortina_musica
+                        .slideUp(400) // Oculta cortina_musica
+                    ;
+                    $('#cortina_contactos')
+                        .removeClass('death') // remueve clase death de cortina_contactos
+                        .addClass('sexy') // agrega clase sexy a cortina_contactos
+                        .slideUp(400) // oculta cortina_contactos
+                    ;
+                    $('#cortina_eventos_pasados')
+                        .removeClass('messiah') // remueve clase messiah de eventos pasados
+                        .addClass('pornographic') // agrega clase pornographic a eventos pasados
+                        .slideUp(400) // oculta cortina eventos pasados
+                    ;
+                    $('#cortina_redes_sociales')
+                        .removeClass('evilution') // remueve clase evilution de redes sociales
+                        .addClass('theRootOfAll') // agrega clase theRootOfAll a redes sociales
+                        .slideUp(400) // oculta cortina redes
+                    ;
+                }
+            }
+        }, 350);
+
     });
     // Ocultar cortina proximos eventos
     $('#cortina_proximos_eventos').mouseleave(function () {
@@ -215,33 +244,40 @@ $(document).ready(function () {
 
     // Muestra cortina redes sociales
     $('#socialnetworks').mouseenter(function () {
-        if($('#cortina_redes_sociales').hasClass('theRootOfAll')) { // Evalúa si tiene la clase pornographic
-            $('#cortina_redes_sociales')
-                .removeClass('theRootOfAll') // Remueve clase sexy de cortina_contactos
-                .addClass('evilution') // Agrega clase death a cortina_contactos
-                .slideDown(400) // Muestra cortina_contactos
-            ;
-            $("#cortina_musica")
-                .removeClass('misericordiaque') // Remueve clase misericordiaque de cortina_musica
-                .addClass('proditio') // Agrega clase proditio a cortina_musica
-                .slideUp(400) // Oculta cortina_musica
-            ;
-            $('#cortina_contactos')
-                .removeClass('death') // remueve clase death de cortina_contactos
-                .addClass('sexy') // agrega clase sexy a cortina_contactos
-                .slideUp(400) // oculta cortina_contactos
-            ;
-            $('#cortina_eventos_pasados')
-                .removeClass('messiah') // remueve clase death de cortina_contactos
-                .addClass('pornographic') // agrega clase sexy a cortina_contactos
-                .slideUp(400) // oculta cortina_contactos
-            ;
-            $('#cortina_proximos_eventos')
-                .removeClass('allTheHate') // remueve clase death de cortina_contactos
-                .addClass('allTheLove') // agrega clase sexy a cortina_contactos
-                .slideUp(400) // oculta cortina_contactos
-            ;
-        }
+        clearTimeout(tiempoEspera); // pone el tiempo de espera
+        estaEncima = true; // detecta que el cursor esta encima de la función
+        tiempoEspera = setTimeout(function () {
+            if(estaEncima) {
+                if($('#cortina_redes_sociales').hasClass('theRootOfAll')) { // Evalúa si tiene la clase pornographic
+                    $('#cortina_redes_sociales')
+                        .removeClass('theRootOfAll') // Remueve clase sexy de cortina_contactos
+                        .addClass('evilution') // Agrega clase death a cortina_contactos
+                        .slideDown(400) // Muestra cortina_contactos
+                    ;
+                    $("#cortina_musica")
+                        .removeClass('misericordiaque') // Remueve clase misericordiaque de cortina_musica
+                        .addClass('proditio') // Agrega clase proditio a cortina_musica
+                        .slideUp(400) // Oculta cortina_musica
+                    ;
+                    $('#cortina_contactos')
+                        .removeClass('death') // remueve clase death de cortina_contactos
+                        .addClass('sexy') // agrega clase sexy a cortina_contactos
+                        .slideUp(400) // oculta cortina_contactos
+                    ;
+                    $('#cortina_eventos_pasados')
+                        .removeClass('messiah') // remueve clase death de cortina_contactos
+                        .addClass('pornographic') // agrega clase sexy a cortina_contactos
+                        .slideUp(400) // oculta cortina_contactos
+                    ;
+                    $('#cortina_proximos_eventos')
+                        .removeClass('allTheHate') // remueve clase death de cortina_contactos
+                        .addClass('allTheLove') // agrega clase sexy a cortina_contactos
+                        .slideUp(400) // oculta cortina_contactos
+                    ;
+                }
+            }
+        }, 350);
+
     });
     // Ocultar cortina eventos pasados
     $('#cortina_redes_sociales').mouseleave(function () {
@@ -250,6 +286,11 @@ $(document).ready(function () {
             $('#cortina_redes_sociales').addClass('theRootOfAll'); // Agrega clase sexy a cortina_contactos
             $('#cortina_redes_sociales').slideUp(400); // Oculta cortina_contactos
         }
+    });
+
+    $('#menu').mouseleave(function() {
+        estaEncima = false;
+        clearTimeout(timeoutId);
     });
     // $('#menu').mouseenter(function () {
     //     if($('#music').mouseenter)
