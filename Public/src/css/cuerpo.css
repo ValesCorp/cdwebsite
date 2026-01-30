@@ -78,14 +78,6 @@ body {
     vertical-align: -0.22em;
 }
 
-.christian_death_button.ui.button {
-    font-size: 30px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
 .ui.hidden.divider.grande {
     padding-top: 10%;
 }
@@ -94,31 +86,40 @@ body {
     font-size: 5vw;
 }
 
+#music-cabecera {
+    padding-top: 5%;
+    transition: all 0.8s ease-out;
+}
+/* esto es para los efectos de la pagina */
+
+
 /* Escalado de elementos para pc, tablet y pantallas anchas */
 @media (min-width: 768px) {
     #contenedor-computadora {
+        min-height: 70vh; /* Altura mínima */
+        overflow: hidden; /* Fuerza a respetar el tamaño */
         margin-top: -8px;
         padding-bottom: 0px;
     }
 
-    #logo_principal {
+    #logo_principal_computadora {
         position: relative;
         padding-top: 12vh;
         z-index: 10;
     }
 
-    #logo_principal .contenedor_logo_principal img {
+    #logo_principal_computadora .contenedor_logo_principal_computadora img {
         width: 40vw;
         height: auto;
     }
 
     /* Carrusel debajo del logo */
-    #carrusel_principal {
+    #carrusel_principal_computadora {
         position: relative;
         margin-top: -15%;  /* justo debajo del logo */
     }
 
-    #carrusel_principal section {
+    #carrusel_principal_computadora section {
         width: 40vw;
         height: auto;
     }
@@ -141,21 +142,30 @@ body {
         padding-left: 13%;
         padding-right: 13%;
     }
+
+    .christian_death_button.ui.button {
+        font-size: 30px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 /* Escalado proporcional con la pantalla para fonos */
 @media (max-width: 767px) {
     #contenedor-fono {
+        min-height: 60vh;
         margin-top: 9%;
         margin-bottom: -5%;
     }
 
-    #logo_principal img {
+    #logo_principal_fono img {
         position: relative;
         z-index: 10;
     }
 
-    #carrusel_principal {
+    #carrusel_principal_fono {
         position: relative;
         margin-top: -25%;
     }
@@ -172,6 +182,19 @@ body {
 
     .historia p {
         font-size: 0.5em !important;
+    }
+    .christian_death_button.ui.button {
+        font-size: 30px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: -5%;
+    }
+
+    #releases .ui.raised.link.card.item {
+        padding: 0;
+        font-size: 8pt;
     }
 }
 
@@ -235,7 +258,6 @@ body {
 }
 
 #cdmusic_encabezado {
-
     padding-top: 5%;
     padding-left: 10%;
 }
@@ -268,12 +290,39 @@ video.historia {
     height: 100%
 }
 
-video.historia.final {
-    width: 70%;
-    height: 70%
+video#no-events {
+    display: block;
+    position: relative;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
 }
 
-/* #escena_uno { */
-/*     padding-top: 15%; */
-/*     padding-bottom: 15%; */
-/* } */
+#nanogallery2 {
+    padding-top: 5%;
+}
+
+#no-fechas {
+    padding-top: 10%;
+}
+
+#no-fechas h1 {
+    margin-top: -5%;
+}
+
+#etiquetap3 h1 {
+    font-size: 50pt;
+}
+
+#video-galeria iframe {
+    display: block;
+    position: relative;
+    width: 40vh;
+    height: auto;
+    margin: 0 auto;
+}
+
+#bocadito-fono img {
+    width: 50pt;
+    height: auto;
+}

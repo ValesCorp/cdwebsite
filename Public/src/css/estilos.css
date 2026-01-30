@@ -100,7 +100,7 @@
 }
 
 /* aqui cambié de img a section */
-#carrusel_principal section {
+#carrusel_principal_computadora section, #carrusel_principal_fono section {
     border-radius: 20px;
     display: block;
     mask-image:
@@ -219,4 +219,13 @@ a.enlace:hover {
 
 .texto.grande {
     font-size: 1.5em;
+}
+
+#logobtn {
+    width: 30px;
+    height: 30px;
+}
+
+#music-title {
+    color: #ffffff;
 }

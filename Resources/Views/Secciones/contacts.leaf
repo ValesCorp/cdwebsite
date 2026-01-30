@@ -20,7 +20,7 @@
         <meta name="description" content="Darkness does not always mean evil. Sometimes it is the refuge of the soul."/>
         <meta name="keywords" content="music, christian death, valor kand, gothic, gothic rock, deathrock, maitri nicolai, dark, black, art, underground"/>
         <meta name="author" content="Vales Corp"/>
-        <title>Christian Death – Contacts</title>
+        <title>Christian Death – 📞 Contacts</title>
         <link type="text/css" rel="stylesheet" href="./src/semantic/semantic.css"></link>
         <link type="text/css" rel="stylesheet" href="./src/css/cuerpo.css"></link>
         <link type="text/css" rel="stylesheet" href="./src/css/componentes.css"></link>
@@ -29,7 +29,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
     </head>
     <body id="root">
-        <!-- Aqui se supone que deberia de ir el menu lateral -->
+        <!-- Cortinas -->
         <!-- Cortina móvil -->
         <div id="cortina_movil" class="insanus">
             <div class="list">
@@ -38,6 +38,53 @@
                 <div class="item"><a href="/pastTourDates">Past Tour Dates</a></div>
                 <div class="item"><a href="/upcomingTourDates">Upcoming Tour Dates</a></div>
                 <div class="item"><a href="/socialNetworks">Social Networks</a></div>
+            </div>
+        </div>
+        <!-- Cortina música -->
+        <div id="cortina_musica" class="proditio">
+            <div class="list">
+                <div class="item titulo">Listen us on</div>
+                <div class="item opcion"><a href="/music">Apple Music</a></div>
+                <div class="item opcion"><a href="/contacts">Spotify</a></div>
+                <div class="item opcion"><a href="/pastDates">YouTube Music</a></div>
+                <div class="item opcion"><a href="/upcomingDates">Deezer</a></div>
+            </div>
+        </div>
+        <!-- Cortina contactos -->
+        <div id="cortina_contactos" class="sexy">
+            <div class="list">
+                <div class="item titulo">Our contacts</div>
+                <div class="item opcion"><a href="/contacts">Management</a></div>
+                <div class="item opcion"><a href="/contacts">Bookings North & South America</a></div>
+                <div class="item opcion"><a href="/contacts">Bookings Europe</a></div>
+                <div class="item opcion"><a href="/contacts">General Information</a></div>
+            </div>
+        </div>
+        <!-- Cortina eventos pasados -->
+        <div id="cortina_eventos_pasados" class="pornographic">
+            <div class="list">
+                <div class="item titulo">Checkout our past dates</div>
+                <div class="item opcion"><a href="/contacts">05.12.2025, CDMX, Foro Indie Rocks</a></div>
+                <div class="item opcion"><a href="/contacts">11.12.2025, Argentina, Unione E Benevolenza</a></div>
+                <div class="item opcion"><a href="/contacts">11.10.2024, Brazil, Vivo Río</a></div>
+                <div class="item opcion"><a href="/contacts">13.10.2024, Brazil, Carioca Club</a></div>
+            </div>
+        </div>
+        <!-- Cortina próximos eventos -->
+        <div id="cortina_proximos_eventos" class="allTheLove">
+            <div class="list">
+                <div class="item titulo">Checkout our next events</div>
+                <div class="item opcion"><a href="/contacts">Actually no one</a></div>
+            </div>
+        </div>
+        <!-- Cortina redes sociales -->
+        <div id="cortina_redes_sociales" class="theRootOfAll">
+            <div class="list">
+                <div class="item titulo">Find us in</div>
+                <div class="item opcion"><a href="https://www.facebook.com/christiandeath" target="blank">Facebook</a></div>
+                <div class="item opcion"><a href="https://www.instagram.com/christiandeath.official/" target="blank">Instagram</a></div>
+                <div class="item opcion"><a href="https://www.youtube.com/@christiandeath5266/videos" target="blank">YouTube</a></div>
+                <div class="item opcion"><a href="https://www.tiktok.com/@christiandeathofficial" target="blank">TikTok</a></div>
             </div>
         </div>
         <div class="ui container">
@@ -71,7 +118,7 @@
             <div class="mobile only ui grid">
                 <div id="menu_movil" class="ui top fixed borderless inverted menu">
                     <div id="menu_christian_death_logo" class="item">
-                        <img class="ui micro image" src="./ui/cdlogo.svg"/>
+                        <a href="/"><img class="ui micro image" src="./ui/cdlogo.svg"/></a>
                     </div>
                     <div class="right menu">
                         <div id="buscar" class="item">
@@ -239,27 +286,27 @@
                     </div>
                 </div>
                 <!-- Inicia fila de contacto webmaster -->
-                <h1 class="Matrix-Book bocadito pequeño">Webmaster</h1>
-                <div class="row">
-                    <div class="column">
-                        <h2 class="SF Pro Display">
-                            Vales Corp
-                        </h2>
-                        <a class="enlace" href="#" target="blank" style="text-decoration: underline;">
-                           <h3>
-                               <span class="material-symbols-outlined">globe</span>: https://valescorp.org
-                           </h3>
-                        </a>
-                    </div>
-                    <div class="column">
-                        <div class="row">
-                            <h2 class="SF Pro Display">David Vales</h2>
-                            <a class="enlace" href="mailto:davidvales@valescorp.org" target="blank">
-                                <h3 class="Helvetica Neue"><span class="material-symbols-outlined">mail</span>: davidvales@valescorp.org</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <!-- <h1 class="Matrix-Book bocadito pequeño">Webmaster</h1> -->
+                <!-- <div class="row"> -->
+                <!--     <div class="column"> -->
+                <!--         <h2 class="SF Pro Display"> -->
+                <!--             Vales Corp -->
+                <!--         </h2> -->
+                <!--         <a class="enlace" href="#" target="blank" style="text-decoration: underline;"> -->
+                <!--            <h3> -->
+                <!--                <span class="material-symbols-outlined">globe</span>: https://valescorp.org -->
+                <!--            </h3> -->
+                <!--         </a> -->
+                <!--     </div> -->
+                <!--     <div class="column"> -->
+                <!--         <div class="row"> -->
+                <!--             <h2 class="SF Pro Display">David Vales</h2> -->
+                <!--             <a class="enlace" href="mailto:davidvales@valescorp.org" target="blank"> -->
+                <!--                 <h3 class="Helvetica Neue"><span class="material-symbols-outlined">mail</span>: davidvales@valescorp.org</h3> -->
+                <!--             </a> -->
+                <!--         </div> -->
+                <!--     </div> -->
+                <!-- </div> -->
                 <!-- Termina fila de contacto general -->
             </div>
         </div>

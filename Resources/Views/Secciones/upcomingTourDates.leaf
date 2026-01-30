@@ -14,20 +14,20 @@
         <meta name="application-name" content="Christian Death – Music"/>
         <meta name="yandex-verification" content="c68591104eff7335"/>
         <meta name="yandex-verification" content="c68591104eff7335"/>
-        <link rel="icon" href="./ui/favicon.ico" type="image/x-icon">
-        <link rel="shortcut icon" href="./ui/favicon.ico" type="image/x-icon">
-        <link rel="manifest" href="./manifest.json"/>
+        <link rel="icon" href="./ui/favicon.ico" type="image/x-icon"></link>
+        <link rel="shortcut icon" href="./ui/favicon.ico" type="image/x-icon"></link>
+        <link rel="manifest" href="./manifest.json"></link>
         <meta name="description" content="Darkness does not always mean evil. Sometimes it is the refuge of the soul."/>
         <meta name="keywords" content="music, christian death, valor kand, gothic, gothic rock, deathrock, maitri nicolai, dark, black, art, underground"/>
         <meta name="author" content="Vales Corp"/>
-        <title>Christian Death – Past Tour Dates</title>
+        <title>Christian Death – 📆 Upcoming Tour Dates</title>
         <link type="text/css" rel="stylesheet" href="./src/semantic/semantic.css"></link>
         <link type="text/css" rel="stylesheet" href="./src/css/cuerpo.css"></link>
         <link type="text/css" rel="stylesheet" href="./src/css/componentes.css"></link>
         <link type="text/css" rel="stylesheet" href="./src/css/estilos.css"></link>
         <link type="text/css" rel="stylesheet" href="./src/css/carrusel.css"></link>
         <link type="text/css" rel="stylesheet" href="./src/css/iframe.css"></link>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" ></link>
     </head>
     <body id="root">
         <body id="root">
@@ -105,8 +105,17 @@
             </div>
         </div>
         <!-- Aqui empieza el contenido de la página -->
-        <div class="ui container segment">
-            <h1 class="ui header">Wait for new dates</h1>
+        <!-- Si no hay ninguna fecha mostrar este div -->
+
+        <div id="no-fechas" class="ui doubling grid container">
+            <div class="row">
+                <div class="ui center aligned column">
+                    <video id="no-events" class="difuminado" autoplay muted loop playsinline>
+                        <source src="./ui/noeventscd.mp4" type="video/mp4"/>
+                    </video>
+                    <h1 id="etiquetap3" class="plateado Matrix-Book treinta pt">Wait for new dates</h1>
+                </div>
+            </div>
         </div>
         <!-- Fin de pié de página -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

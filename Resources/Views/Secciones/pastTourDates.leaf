@@ -20,7 +20,7 @@
         <meta name="description" content="Darkness does not always mean evil. Sometimes it is the refuge of the soul."/>
         <meta name="keywords" content="music, christian death, valor kand, gothic, gothic rock, deathrock, maitri nicolai, dark, black, art, underground"/>
         <meta name="author" content="Vales Corp"/>
-        <title>Christian Death – Past Tour Dates</title>
+        <title>Christian Death – ⏳ Past Tour Dates</title>
         <link type="text/css" rel="stylesheet" href="./src/semantic/semantic.css"></link>
         <link type="text/css" rel="stylesheet" href="./src/css/cuerpo.css"></link>
         <link type="text/css" rel="stylesheet" href="./src/css/componentes.css"></link>
@@ -94,7 +94,7 @@
             <div class="mobile only ui grid">
                 <div id="menu_movil" class="ui top fixed borderless inverted menu">
                     <div id="menu_christian_death_logo" class="item">
-                        <img class="ui micro image" src="./ui/cdlogo.svg"/>
+                        <a href="/"><img class="ui micro image" src="./ui/cdlogo.svg"/></a>
                     </div>
                     <div class="right menu">
                         <div id="buscar" class="item">
