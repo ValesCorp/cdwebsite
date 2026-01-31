@@ -46,10 +46,10 @@
         <div id="cortina_musica" class="proditio">
             <div class="list">
                 <div class="item titulo">Listen us on</div>
-                <div class="item opcion"><a href="/music">Apple Music</a></div>
-                <div class="item opcion"><a href="/contacts">Spotify</a></div>
-                <div class="item opcion"><a href="/pastDates">YouTube Music</a></div>
-                <div class="item opcion"><a href="/upcomingDates">Deezer</a></div>
+                <div class="item opcion"><a href="https://music.apple.com/mx/artist/christian-death/6550137" target="blank">Apple Music</a></div>
+                <div class="item opcion"><a href="https://open.spotify.com/intl-es/artist/6mEohczxsctzkEIU0WAeWD?si=tCoOx4BQQsCVL_WQoFY7Fg" target="blank">Spotify</a></div>
+                <div class="item opcion"><a href="https://music.youtube.com/channel/UCxi91Pfz39YRtXQdn5n0NzA?si=EedafrKxRBumShHg" target="blank">YouTube Music</a></div>
+                <div class="item opcion"><a href="https://www.deezer.com/en/artist/15536" target="blank">Deezer</a></div>
             </div>
         </div>
         <!-- Cortina contactos -->
@@ -62,7 +62,34 @@
                 <div class="item opcion"><a href="/contacts">General Information</a></div>
             </div>
         </div>
-        <!-- Menú lateral -->
+        <!-- Cortina eventos pasados -->
+        <div id="cortina_eventos_pasados" class="pornographic">
+            <div class="list">
+                <div class="item titulo">Checkout our past dates</div>
+                <div class="item opcion"><a href="/pastTourDates">05.12.2025, CDMX, Foro Indie Rocks</a></div>
+                <div class="item opcion"><a href="/pastTourDates">11.12.2025, Argentina, Unione E Benevolenza</a></div>
+                <div class="item opcion"><a href="/pastTourDates">11.10.2024, Brazil, Vivo Río</a></div>
+                <div class="item opcion"><a href="/pastTourDates">13.10.2024, Brazil, Carioca Club</a></div>
+            </div>
+        </div>
+        <!-- Cortina próximos eventos -->
+        <div id="cortina_proximos_eventos" class="allTheLove">
+            <div class="list">
+                <div class="item titulo">Checkout our next events</div>
+                <div class="item opcion"><a href="/contacts">Actually no one</a></div>
+            </div>
+        </div>
+        <!-- Cortina redes sociales -->
+        <div id="cortina_redes_sociales" class="theRootOfAll">
+            <div class="list">
+                <div class="item titulo">Find us in</div>
+                <div class="item opcion"><a href="https://www.facebook.com/christiandeath" target="blank">Facebook</a></div>
+                <div class="item opcion"><a href="https://www.instagram.com/christiandeath.official/" target="blank">Instagram</a></div>
+                <div class="item opcion"><a href="https://www.youtube.com/@christiandeath5266/videos" target="blank">YouTube</a></div>
+                <div class="item opcion"><a href="https://www.tiktok.com/@christiandeathofficial" target="blank">TikTok</a></div>
+            </div>
+        </div>
+        <!-- Termina cortinas -->
         <div class="ui container">
             <!-- Empieza menú pc -->
             <div class="computer only ui tablet only grid">
