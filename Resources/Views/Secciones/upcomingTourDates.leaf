@@ -62,7 +62,7 @@
         </div>
         <!-- Menú lateral -->
         <div class="ui container">
-            <!-- Menú principal para pc y pantallas grandes -->
+            <!-- Empieza menú pc -->
             <div class="computer only ui tablet only grid">
                 <div class="ui top fixed borderless inverted menu">
                     <div id="menu">
@@ -78,22 +78,24 @@
                         <a id="past" href="/pastTourDates" class="item">
                             <span class="material-symbols-outlined">history</span>&nbsp;Past Tour Dates
                         </a>
-                        <a id="upcoming" href="./paginas/nosotros.html" class="item">
+                        <a id="upcoming" href="/upcomingTourDates" class="item">
                             <span class="material-symbols-outlined">calendar_add_on</span>&nbsp;Upcoming Tour Dates
                         </a>
-                        <a id="socialnetworks" href="./paginas/nosotros.html" class="item">
+                        <a id="socialnetworks" href="/socialNetworks" class="item">
                             <span class="material-symbols-outlined">globe</span>&nbsp;Social Networks
                         </a>
                     </div>
                 </div>
-            <!-- Menú movil -->
+            </div>
+            <!-- Termina menú pc -->
+            <!-- Empieza menú movil -->
             <div class="mobile only ui grid">
                 <div id="menu_movil" class="ui top fixed borderless inverted menu">
-                    <div class="item">
+                    <div id="menu_christian_death_logo" class="item">
                         <a href="/"><img class="ui micro image" src="./ui/cdlogo.svg"/></a>
                     </div>
                     <div class="right menu">
-                        <div class="item">
+                        <div id="buscar" class="item">
                             <span class="material-symbols-outlined">search</span>
                         </div>
                         <div id="boton_menu_movil" class="item">
@@ -103,6 +105,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Termina menú movil -->
         </div>
         <!-- Aqui empieza el contenido de la página -->
         <!-- Si no hay ninguna fecha mostrar este div -->

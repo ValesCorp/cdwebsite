@@ -150,6 +150,15 @@ body {
         padding-left: 15px;
         padding-right: 15px;
     }
+
+    .pedacito {
+        font-size: 20pt;
+        text-align: center;
+        padding-bottom: 5%;
+        padding: 10%;
+    }
+
+
 }
 
 /* Escalado proporcional con la pantalla para fonos */
@@ -192,9 +201,17 @@ body {
         margin-top: -5%;
     }
 
-    #releases .ui.raised.link.card.item {
-        padding: 0;
+    #releases .row .column {
+        padding: 2px;
         font-size: 8pt;
+    }
+
+    .pedacito {
+        font-size: 8pt;
+        text-align: center;
+        padding-bottom: 5%;
+        padding: 10%;
+        line-height: 0.8;
     }
 }
 
@@ -268,13 +285,6 @@ body {
 
 .ui.album.modal {
     width: 40%;
-}
-
-.pedacito {
-    font-size: 20pt;
-    text-align: center;
-    padding-bottom: 5%;
-    padding: 10%;
 }
 
 .ui.card {

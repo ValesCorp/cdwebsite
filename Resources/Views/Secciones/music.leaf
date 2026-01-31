@@ -331,7 +331,8 @@
                         </div>
                         <!-- Fin fila 1 -->
                     </div>
-                    <div id="masAlbumes" class="oculto ui four column stackable grid">
+                    <!-- Pedazo oculto para desplegar -->
+                    <div id="masAlbumes" class="oculto ui four column grid">
                         <!-- Inicio fila 2 -->
                         <!-- comentario de prueba -->
                         <div class="row">
