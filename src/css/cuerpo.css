@@ -52,7 +52,8 @@ body {
 #cortina_contactos,
 #cortina_eventos_pasados,
 #cortina_proximos_eventos,
-#cortina_redes_sociales {
+#cortina_redes_sociales,
+#cortina_tienda {
     position: fixed;
     top: 0;
     left: 0;
@@ -98,7 +99,7 @@ body {
     #contenedor-computadora {
         min-height: 70vh; /* Altura mínima */
         overflow: hidden; /* Fuerza a respetar el tamaño */
-        margin-top: -5%;
+        margin-top: -2%;
         padding-bottom: 0px;
     }
 

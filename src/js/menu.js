@@ -26,7 +26,7 @@ $(document).ready(function () {
     $("#cortina_redes_sociales").hide(); // Clase muestra 'evilution'
   }
   if ($("#cortina_tienda").hasClass("evil")) {
-    $("#cortina_redes_sociales").hide(); // Clase muestra 'becomesRule'
+    $("#cortina_tienda").hide(); // Clase muestra 'becomesRule'
   }
 
   // Botón de acción del menú móvil, básicamente evalua si la cortina tiene la clase para mostrar u ocultar
@@ -249,9 +249,9 @@ $(document).ready(function () {
     estaEncima = true; // detecta que el cursor esta encima de la función
     tiempoEspera = setTimeout(function () {
       if (estaEncima) {
-        if ($("#cortina_shop").hasClass("evil")) {
+        if ($("#cortina_tienda").hasClass("evil")) {
           // Evalúa si tiene la clase pornographic
-          $("#cortina_shop")
+          $("#cortina_tienda")
             .removeClass("evil") // Remueve clase sexy de cortina_contactos
             .addClass("becomesRule") // Agrega clase death a cortina_contactos
             .slideDown(400); // Muestra cortina_contactos
@@ -271,17 +271,21 @@ $(document).ready(function () {
             .removeClass("allTheHate") // remueve clase death de cortina_contactos
             .addClass("allTheLove") // agrega clase sexy a cortina_contactos
             .slideUp(400); // oculta cortina_contactos
+          $("#cortina_redes_sociales")
+            .removeClass("evilution") // remueve clase evilution de redes sociales
+            .addClass("theRootOfAll") // agrega clase theRootOfAll a redes sociales
+            .slideUp(400); // oculta cortina redes
         }
       }
     }, 350);
   });
-  // Ocultar cortina redes sociales
-  $("#cortina_redes_sociales").mouseleave(function () {
-    if ($("#cortina_redes_sociales").hasClass("evilution")) {
+  // Ocultar cortina tienda
+  $("#cortina_tienda").mouseleave(function () {
+    if ($("#cortina_tienda").hasClass("becomesRule")) {
       // Evalúa si tiene la clase death
-      $("#cortina_redes_sociales").removeClass("evilution"); // Remueve clase death de cortina_contactos
-      $("#cortina_redes_sociales").addClass("theRootOfAll"); // Agrega clase sexy a cortina_contactos
-      $("#cortina_redes_sociales").slideUp(400); // Oculta cortina_contactos
+      $("#cortina_tienda").removeClass("becomesRule"); // Remueve clase death de cortina_contactos
+      $("#cortina_tienda").addClass("evil"); // Agrega clase sexy a cortina_contactos
+      $("#cortina_tienda").slideUp(400); // Oculta cortina_contactos
     }
   });
 
